@@ -1,4 +1,4 @@
-package org.aerie.forest.core.element.rebar.bootable;
+package org.aerie.forest.core.element.rebar.singleton.bootable;
 
 import org.aerie.forest.core.factory.storage.ForestRebarStorage;
 

@@ -1,4 +1,4 @@
-package org.aerie.forest.core.element.rebar.processer.config.container;
+package org.aerie.forest.core.element.rebar.singleton.processer.config.container;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

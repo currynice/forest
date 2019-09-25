@@ -1,4 +1,4 @@
-package org.aerie.forest.core.element.rebar.processer.exception;
+package org.aerie.forest.core.element.rebar.singleton.processer.exception;
 
 import java.util.Optional;
 
@@ -49,7 +49,7 @@ enum ExceptionStamper {
 			break;
 		case FATAL:
 			// FATAL标记
-			exceptionLogger.getLOGGER().error(GlobalLogger.INSTANCE.getMARKERFATAL(), message, throwable);
+			exceptionLogger.getLOGGER().error(GlobalLogger.INSTANCE.getMARKER_FATAL(), message, throwable);
 			break;
 		}
 	}

@@ -1,11 +1,11 @@
 package org.aerie.forest.core.element.rebar;
 
-import org.aerie.forest.core.element.rebar.bootable.timecrystal.TimeCrystal;
-import org.aerie.forest.core.element.rebar.bootable.uuidpool.UuidPool;
 import org.aerie.forest.core.factory.container.ForestRebarContainerCategory;
 import org.aerie.forest.core.factory.storage.ForestRebarStorage;
-import org.aerie.forest.core.element.rebar.bootable.timecrystal.TimeCrystalStorage;
-import org.aerie.forest.core.element.rebar.bootable.uuidpool.UuidPoolStorage;
+import org.aerie.forest.core.element.rebar.singleton.bootable.timecrystal.TimeCrystal;
+import org.aerie.forest.core.element.rebar.singleton.bootable.timecrystal.TimeCrystalStorage;
+import org.aerie.forest.core.element.rebar.singleton.bootable.uuidpool.UuidPool;
+import org.aerie.forest.core.element.rebar.singleton.bootable.uuidpool.UuidPoolStorage;
 
 /**
  * 

@@ -1,4 +1,4 @@
-package org.aerie.forest.core.element.rebar.processer.exception;
+package org.aerie.forest.core.element.rebar.singleton.processer.exception;
 
 import java.util.Optional;
 
@@ -6,7 +6,7 @@ import org.aerie.forest.core.element.brick.exception.CustomException;
 import org.aerie.forest.core.element.brick.exception.ExceptionGradeEnum;
 import org.aerie.forest.core.element.brick.exception.ExceptionPack;
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
-import org.aerie.forest.core.element.rebar.processer.ForestProcessor;
+import org.aerie.forest.core.element.rebar.singleton.processer.ForestProcessor;
 import org.aerie.forest.core.element.rebar.tool.ThrowableTool;
 
 /**
@@ -154,7 +154,7 @@ public final class ExceptionProcessor extends ForestProcessor {
 
 				@Override
 				public void action() {
-					GlobalLogger.INSTANCE.getLOGGER().error(GlobalLogger.INSTANCE.getMARKERFATAL(), "系统崩溃退出");
+					GlobalLogger.INSTANCE.getLOGGER().error(GlobalLogger.INSTANCE.getMARKER_FATAL(), "系统崩溃退出");
 					// 系统退出
 					System.exit(0);
 				}

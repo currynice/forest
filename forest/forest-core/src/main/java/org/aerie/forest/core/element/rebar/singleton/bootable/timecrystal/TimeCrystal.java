@@ -1,10 +1,10 @@
-package org.aerie.forest.core.element.rebar.bootable.timecrystal;
+package org.aerie.forest.core.element.rebar.singleton.bootable.timecrystal;
 
 import java.time.LocalDateTime;
 
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
 import org.aerie.forest.core.element.rebar.ForestRebar;
-import org.aerie.forest.core.element.rebar.bootable.ForestBootable;
+import org.aerie.forest.core.element.rebar.singleton.bootable.ForestBootable;
 
 /**
  * 

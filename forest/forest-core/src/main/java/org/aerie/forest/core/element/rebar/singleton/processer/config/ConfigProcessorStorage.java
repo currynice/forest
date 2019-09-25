@@ -1,9 +1,9 @@
-package org.aerie.forest.core.element.rebar.processer.config;
+package org.aerie.forest.core.element.rebar.singleton.processer.config;
 
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
 import org.aerie.forest.core.element.rebar.ForestRebar;
-import org.aerie.forest.core.element.rebar.bootable.timecrystal.TimeCrystalStorage;
-import org.aerie.forest.core.element.rebar.processer.ForestProcessorStorage;
+import org.aerie.forest.core.element.rebar.singleton.bootable.timecrystal.TimeCrystalStorage;
+import org.aerie.forest.core.element.rebar.singleton.processer.ForestProcessorStorage;
 
 /**
  * 

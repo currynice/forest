@@ -1,4 +1,4 @@
-package org.aerie.forest.core.element.rebar.bootable;
+package org.aerie.forest.core.element.rebar.singleton.bootable;
 
 import java.time.LocalDateTime;
 

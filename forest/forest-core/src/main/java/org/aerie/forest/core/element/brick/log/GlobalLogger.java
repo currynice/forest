@@ -24,7 +24,7 @@ public enum GlobalLogger {
 	 * FATAL日志标记：==> 字体颜色：30:黑 31:红 32:绿 33:黄 34:蓝色 35:紫色 36:深绿 37:白色 背景颜色：40:黑
 	 * 41:深红42:绿43:黄色44:蓝色 45:紫色 46:深绿 47:白色
 	 */
-	private final Marker MARKERFATAL = MarkerFactory
+	private final Marker MARKER_FATAL = MarkerFactory
 			.getMarker("  \u001b[45;1;37m!*#*#* FATAL *#*#*!\u001b[47;0;35m  ==>");
 
 	private GlobalLogger() {
@@ -38,10 +38,11 @@ public enum GlobalLogger {
 		return LOGGER;
 	}
 
-	public Marker getMARKERFATAL() {
+	public Marker getMARKER_FATAL() {
 		if (!ForestConfig.INSTANCE.isLogInitConfig()) {
 			throw new Error("log未完成配置文件加载");
 		}
-		return MARKERFATAL;
+		return MARKER_FATAL;
 	}
+
 }
