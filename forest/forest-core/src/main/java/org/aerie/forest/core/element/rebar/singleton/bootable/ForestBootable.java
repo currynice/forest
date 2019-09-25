@@ -9,7 +9,7 @@ import org.aerie.forest.core.element.brick.exception.CustomException;
 import org.aerie.forest.core.element.brick.exception.ExceptionGradeEnum;
 import org.aerie.forest.core.element.brick.exception.ExceptionPack;
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
-import org.aerie.forest.core.element.rebar.ForestRebar;
+import org.aerie.forest.core.element.rebar.singleton.ForestSingletonRebar;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,7 +22,7 @@ import lombok.Data;
  * @date 2019年8月21日上午9:35:36
  * @version 1.0.1
  */
-public abstract class ForestBootable extends ForestRebar implements BootProcessor {
+public abstract class ForestBootable extends ForestSingletonRebar implements BootProcessor {
 
 	/**
 	 * 

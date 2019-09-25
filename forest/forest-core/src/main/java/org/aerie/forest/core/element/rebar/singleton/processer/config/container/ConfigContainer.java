@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.aerie.forest.core.element.brick.exception.CustomException;
-import org.aerie.forest.core.element.rebar.tool.ClassTool;
+import org.aerie.forest.core.element.rebar.unsingleton.tool.ClassTool;
 
 /**
  * 

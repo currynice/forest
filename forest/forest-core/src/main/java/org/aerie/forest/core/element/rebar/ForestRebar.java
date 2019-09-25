@@ -4,17 +4,14 @@ import org.aerie.forest.core.init.ForestConfig;
 
 /**
  * 
- * @description forest架构元素【子类均是单例】
+ * @description forest架构元素
  * @author trotkFalcon
  * @company aerie
  * @date 2019年8月29日下午4:12:16
  * @version 1.0.1
  */
 public abstract class ForestRebar {
-	/**
-	 * 单例标识符
-	 */
-	protected boolean singletonFlag = false;
+	
 	/**
 	 * forest架构元素的名称
 	 */

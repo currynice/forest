@@ -39,6 +39,11 @@ public abstract class ForestRebarStorage {
 		ForestContainer.INSTANCE.addForestRebar(forestRebar);
 	}
 
+	/**
+	 * 
+	 * @description 获得对应的forest架构元素
+	 * @return
+	 */
 	protected abstract ForestRebar getForestRebar();
 
 	/**

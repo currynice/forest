@@ -20,4 +20,5 @@ public interface SingleFunction {
 	 * @throws Exception
 	 */
 	public void action() throws Exception;
+
 }

@@ -20,11 +20,6 @@ public final class TimeCrystalStorage extends ForestBootableStorage {
 	 */
 	private static TimeCrystalStorage timeCrystalStorage;
 
-	@Override
-	public ForestRebar getForestRebar() {
-		return TimeCrystal.getInstance();
-	}
-
 	private TimeCrystalStorage() {
 		synchronized (TimeCrystalStorage.class) {
 			if (singletonFlag == true) {
@@ -55,4 +50,8 @@ public final class TimeCrystalStorage extends ForestBootableStorage {
 		return timeCrystalStorage;
 	}
 
+	@Override
+	public ForestRebar getForestRebar() {
+		return TimeCrystal.getInstance();
+	}
 }
