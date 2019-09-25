@@ -13,7 +13,7 @@ import org.aerie.forest.core.element.rebar.bootable.uuidpool.UuidPool;
  * @date 2019年9月14日下午8:43:43
  *
  */
-final class ForestRebarFactoryType {
+public final class ForestRebarFactoryType {
 	/**
 	 * 
 	 * @description 类别【没有校验该泛型是不是存在于ForestRebarContainerCategory对应的容器里面】T的限定也没有处理

@@ -23,6 +23,7 @@ public class AppTest {
 		ForestInit.INSTANCE.loadLogConfig();
 		TimeCrystal forestRebarFactory = ForestFactory.INSTANCE
 				.getForestRebarFactory(ForestRebarFactoryType.TIME_CRYSTAL);
+		ForestRebarFactoryType d = new ForestRebarFactoryType();
 		try {
 			forestRebarFactory.run();
 		} catch (Exception e) {
