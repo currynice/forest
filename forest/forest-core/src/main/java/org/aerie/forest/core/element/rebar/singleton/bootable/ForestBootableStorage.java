@@ -1,6 +1,6 @@
 package org.aerie.forest.core.element.rebar.singleton.bootable;
 
-import org.aerie.forest.core.factory.storage.ForestRebarStorage;
+import org.aerie.forest.core.element.rebar.singleton.ForestSingletonRebarStorage;
 
 /**
  * 
@@ -11,6 +11,6 @@ import org.aerie.forest.core.factory.storage.ForestRebarStorage;
  * @date 2019年9月15日下午3:48:17
  *
  */
-public abstract class ForestBootableStorage extends ForestRebarStorage {
+public abstract class ForestBootableStorage extends ForestSingletonRebarStorage {
 
 }

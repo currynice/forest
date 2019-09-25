@@ -11,7 +11,7 @@ import org.aerie.forest.core.init.ForestConfig;
  * @version 1.0.1
  */
 public abstract class ForestRebar {
-	
+
 	/**
 	 * forest架构元素的名称
 	 */
@@ -36,4 +36,9 @@ public abstract class ForestRebar {
 		return forestRebarName;
 	}
 
+	/**
+	 * 
+	 * @description 架构元素 的规范是否合法
+	 */
+	protected abstract void isLegal();
 }

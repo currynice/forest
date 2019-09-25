@@ -1,6 +1,6 @@
 package org.aerie.forest.core.element.rebar.singleton.processer;
 
-import org.aerie.forest.core.factory.storage.ForestRebarStorage;
+import org.aerie.forest.core.element.rebar.singleton.ForestSingletonRebarStorage;
 
 /**
  * 
@@ -10,6 +10,6 @@ import org.aerie.forest.core.factory.storage.ForestRebarStorage;
  * @date 2019年9月12日下午4:06:03
  * @version 1.0.1
  */
-public abstract class ForestProcessorStorage extends ForestRebarStorage {
+public abstract class ForestProcessorStorage extends ForestSingletonRebarStorage {
 
 }
