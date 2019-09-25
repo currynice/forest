@@ -254,7 +254,7 @@ public enum ForestInit {
 		try {
 			// 加载LoggerFactory
 			ClassLoader loggerFactoryClassLoader = LoggerFactory.class.getClassLoader();
-			Enumeration<URL> paths;
+			Enumeration<URL> paths = null;
 			// 搜索路径中查找静态日志绑定器路径的所有资源
 			if (loggerFactoryClassLoader == null) {
 				paths = ClassLoader.getSystemResources(STATIC_LOGGER_BINDER_PATH);

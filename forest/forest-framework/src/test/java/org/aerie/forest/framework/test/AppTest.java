@@ -1,4 +1,4 @@
-package org.aerie.forest.framework;
+package org.aerie.forest.framework.test;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
@@ -13,6 +13,8 @@ import org.aerie.forest.core.element.rebar.ForestRebar;
 import org.aerie.forest.core.element.rebar.bootable.timecrystal.TimeCrystal;
 import org.aerie.forest.core.element.rebar.bootable.timecrystal.TimeCrystalStorage;
 import org.aerie.forest.core.init.ForestInit;
+import org.aerie.forest.framework.ForestFactory;
+import org.aerie.forest.framework.ForestRebarFactoryType;
 
 /**
  * Unit test for simple App.

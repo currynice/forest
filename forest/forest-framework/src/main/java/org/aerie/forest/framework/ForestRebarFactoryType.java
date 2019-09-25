@@ -22,7 +22,7 @@ public final class ForestRebarFactoryType {
 	 * @date 2019年9月24日下午4:01:48
 	 * @version 1.0.1
 	 */
-	public final static class RebarType<T> {
+	final static class RebarType<T> {
 		/**
 		 * 架构元素所在容器分类
 		 */
