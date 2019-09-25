@@ -175,7 +175,7 @@ public enum ForestInit {
 
 	/**
 	 * 
-	 * @description
+	 * @description 加载log4j2配置文件
 	 * @author trotkFalcon
 	 * @company aerie
 	 * @date 2019年8月30日下午12:48:45
