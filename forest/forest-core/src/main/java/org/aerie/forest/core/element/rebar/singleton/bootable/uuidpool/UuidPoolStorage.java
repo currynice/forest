@@ -20,12 +20,6 @@ public final class UuidPoolStorage extends ForestBootableStorage {
 	 */
 	private static UuidPoolStorage uuidPoolStorage;
 
-	@Override
-	protected ForestRebar getForestRebar() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 	private UuidPoolStorage() {
 		synchronized (UuidPoolStorage.class) {
 			if (singletonFlag == true) {
@@ -54,5 +48,15 @@ public final class UuidPoolStorage extends ForestBootableStorage {
 			}
 		}
 		return uuidPoolStorage;
+	}
+
+	/**
+	 * 
+	 * @description 获得uuidPool单例对象
+	 * @return
+	 */
+	@Override
+	protected ForestRebar getForestRebar() {
+		return UuidPool.getInstance();
 	}
 }

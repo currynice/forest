@@ -1,11 +1,5 @@
 package org.aerie.forest.core.factory.storage;
 
-import java.lang.reflect.Method;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
-import org.aerie.forest.core.element.brick.log.GlobalLogger;
 import org.aerie.forest.core.element.rebar.ForestRebar;
 import org.aerie.forest.core.factory.container.ForestContainer;
 
@@ -18,7 +12,7 @@ import org.aerie.forest.core.factory.container.ForestContainer;
  * @date 2019年9月15日下午3:51:54
  *
  */
-public abstract class ForestRebarStorage {
+public abstract class ForestRebarStorage<T extends ForestRebar> {
 
 	/**
 	 * 单例标识符
@@ -34,7 +28,7 @@ public abstract class ForestRebarStorage {
 	 * @version 1.0.1
 	 */
 	public final void putInStorage() throws Exception {
-		ForestRebar forestRebar = getForestRebar();
+		T forestRebar = getForestRebar();
 		isLegal(forestRebar);
 		ForestContainer.INSTANCE.addForestRebar(forestRebar);
 	}
@@ -44,7 +38,16 @@ public abstract class ForestRebarStorage {
 	 * @description 获得对应的forest架构元素
 	 * @return
 	 */
-	protected abstract ForestRebar getForestRebar();
+	protected abstract T getForestRebar();
 
-	
+	/**
+	 * 
+	 * @description 架构元素的规范是否合法
+	 * @author falconTrotk
+	 * @company aerie
+	 * @date 2019年9月26日上午10:43:15
+	 * @version 1.0.1
+	 */
+	protected abstract void isLegal(T forestRebar);
+
 }

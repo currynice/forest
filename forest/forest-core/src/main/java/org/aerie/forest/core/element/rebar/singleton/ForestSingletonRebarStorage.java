@@ -1,5 +1,6 @@
 package org.aerie.forest.core.element.rebar.singleton;
 
+import org.aerie.forest.core.element.rebar.ForestRebar;
 import org.aerie.forest.core.factory.storage.ForestRebarStorage;
 
 /**
@@ -10,6 +11,11 @@ import org.aerie.forest.core.factory.storage.ForestRebarStorage;
  * @date 2019年9月26日上午7:29:29
  * @version 1.0.1
  */
-public abstract class ForestSingletonRebarStorage extends ForestRebarStorage {
+public abstract class ForestSingletonRebarStorage<T extends ForestSingletonRebar> extends ForestRebarStorage<T> {
+	
+	@Override
+	protected void isLegal(ForestRebar forestRebar) {
+		
+	}
 
 }

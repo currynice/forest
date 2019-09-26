@@ -50,8 +50,13 @@ public final class TimeCrystalStorage extends ForestBootableStorage {
 		return timeCrystalStorage;
 	}
 
+	/**
+	 * 
+	 * @description 获得时间晶振单例对象
+	 * @return
+	 */
 	@Override
-	public ForestRebar getForestRebar() {
+	protected ForestRebar getForestRebar() {
 		return TimeCrystal.getInstance();
 	}
 }

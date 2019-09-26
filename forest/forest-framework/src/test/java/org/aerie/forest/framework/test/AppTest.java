@@ -24,7 +24,7 @@ public class AppTest {
 
 	public static void main(String[] args) {
 		ForestInit.INSTANCE.loadLogConfig();
-		ExceptionGradeEnum error = ExceptionGradeEnum.ERROR;
+		TimeCrystal.getInstance().isLegal(null);
 //		ForestInit.INSTANCE.loadLogConfig();
 //		TimeCrystal forestRebarFactory = ForestFactory.INSTANCE
 //				.getForestRebarFactory(ForestRebarFactoryType.TIME_CRYSTAL);

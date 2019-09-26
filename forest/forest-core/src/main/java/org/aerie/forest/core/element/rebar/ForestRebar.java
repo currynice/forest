@@ -38,7 +38,7 @@ public abstract class ForestRebar {
 
 	/**
 	 * 
-	 * @description 架构元素 的规范是否合法
+	 * @description 架构元素的规范是否合法
 	 */
 	protected abstract void isLegal();
 }
