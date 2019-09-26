@@ -1,7 +1,5 @@
 package org.aerie.forest.core.element.rebar.processer.exception;
 
-import org.aerie.forest.core.function.SingleFunction;
-
 /**
  * 
  * @description 异常处理动作
@@ -11,6 +9,15 @@ import org.aerie.forest.core.function.SingleFunction;
  * @version 1.0.1
  */
 @FunctionalInterface
-interface ExceptionDisposeFunction extends SingleFunction {
-
+interface ExceptionDisposeFunction {
+	/**
+	 * 
+	 * @description 执行
+	 * @author falconTrotk
+	 * @company aerie
+	 * @date 2019年9月12日下午1:31:31
+	 * @version 1.0.1
+	 * @throws Exception
+	 */
+	public void action() throws Exception;
 }

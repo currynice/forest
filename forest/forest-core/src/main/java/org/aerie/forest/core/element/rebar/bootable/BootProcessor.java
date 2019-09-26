@@ -2,8 +2,6 @@ package org.aerie.forest.core.element.rebar.bootable;
 
 import java.time.LocalDateTime;
 
-import org.aerie.forest.core.function.SingleFunction;
-
 /**
  * 
  * @description 启动器
@@ -15,14 +13,24 @@ import org.aerie.forest.core.function.SingleFunction;
 public interface BootProcessor {
 	/**
 	 * 
-	 * @description 
+	 * @description
 	 * @author falconTrotk
 	 * @company aerie
 	 * @date 2019年9月12日下午2:08:01
 	 * @version 1.0.1
 	 */
-	interface RunnableFunction extends SingleFunction{
-
+	@FunctionalInterface
+	interface RunnableFunction {
+		/**
+		 * 
+		 * @description 执行
+		 * @author falconTrotk
+		 * @company aerie
+		 * @date 2019年9月12日下午1:31:31
+		 * @version 1.0.1
+		 * @throws Exception
+		 */
+		public void action() throws Exception;
 	}
 
 	/**

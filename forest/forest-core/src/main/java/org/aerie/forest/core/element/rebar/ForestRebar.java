@@ -46,7 +46,7 @@ public abstract class ForestRebar {
 		return forestRebarName;
 	}
 
-	public void isLegal() {
+	public void isLegal(ForestRebar forestRebar) {
 		// 获得对象的类
 		Class<? extends ForestRebar> forestRebarClass = this.getClass();
 		if (forestRebarClass.getModifiers() != 17) {

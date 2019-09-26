@@ -22,21 +22,28 @@ import org.aerie.forest.framework.ForestRebarFactoryType;
 public class AppTest {
 
 	public static void main(String[] args) {
-		ForestInit.INSTANCE.loadLogConfig();
 //		ForestInit.INSTANCE.loadLogConfig();
-		TimeCrystal forestRebarFactory = ForestFactory.INSTANCE
-				.getForestRebarFactory(ForestRebarFactoryType.TIME_CRYSTAL);
-		try {
-			forestRebarFactory.run();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+////		ForestInit.INSTANCE.loadLogConfig();
+//		TimeCrystal forestRebarFactory = ForestFactory.INSTANCE
+//				.getForestRebarFactory(ForestRebarFactoryType.TIME_CRYSTAL);
+//		try {
+//			forestRebarFactory.run();
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		AAA a = new AAA();
+		CCC c = new CCC();
+		List<String> s = AAA.s;
+		System.out.println("--------------------");
+		for (String ss : s) {
+			System.out.println(ss);
 		}
 //		FileTool f = new FileTool();
 
 //		ForestRebarFactoryType d = new ForestRebarFactoryType();
 //		try {
-		
+
 //			forestRebarFactory.run();
 //		} catch (Exception e) {
 //			// TODO Auto-generated catch block
