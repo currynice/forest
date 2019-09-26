@@ -1,11 +1,10 @@
 package org.aerie.forest.core.element.rebar;
 
 import org.aerie.forest.core.factory.container.ForestRebarContainerCategory;
-import org.aerie.forest.core.factory.storage.ForestRebarStorage;
-import org.aerie.forest.core.element.rebar.singleton.bootable.timecrystal.TimeCrystal;
-import org.aerie.forest.core.element.rebar.singleton.bootable.timecrystal.TimeCrystalStorage;
-import org.aerie.forest.core.element.rebar.singleton.bootable.uuidpool.UuidPool;
-import org.aerie.forest.core.element.rebar.singleton.bootable.uuidpool.UuidPoolStorage;
+import org.aerie.forest.core.element.rebar.bootable.timecrystal.TimeCrystal;
+import org.aerie.forest.core.element.rebar.bootable.timecrystal.TimeCrystalStorage;
+import org.aerie.forest.core.element.rebar.bootable.uuidpool.UuidPool;
+import org.aerie.forest.core.element.rebar.bootable.uuidpool.UuidPoolStorage;
 
 /**
  * 
@@ -30,14 +29,14 @@ public enum ForestRebarCategory {
 	/**
 	 * 架构元素入库组件
 	 */
-	private ForestRebarStorage forestRebarStorage;
+	private ForestRebarStorage<?> forestRebarStorage;
 	/**
 	 * forest架构元素属于的容器
 	 */
 	private ForestRebarContainerCategory forestRebarContainerCategory;
 
 	private ForestRebarCategory(String typeName, Class<? extends ForestRebar> forestRebarClass,
-			ForestRebarStorage forestRebarStorage, ForestRebarContainerCategory forestRebarContainerCategory) {
+			ForestRebarStorage<?> forestRebarStorage, ForestRebarContainerCategory forestRebarContainerCategory) {
 		this.typeName = typeName;
 		this.forestRebarClass = forestRebarClass;
 		this.forestRebarStorage = forestRebarStorage;
@@ -52,7 +51,7 @@ public enum ForestRebarCategory {
 		return forestRebarClass;
 	}
 
-	public ForestRebarStorage getForestRebarStorage() {
+	public ForestRebarStorage<?> getForestRebarStorage() {
 		return forestRebarStorage;
 	}
 

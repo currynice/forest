@@ -11,8 +11,7 @@ import java.util.stream.Collectors;
 import org.aerie.forest.core.element.brick.exception.ExceptionGradeEnum;
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
 import org.aerie.forest.core.element.rebar.ForestRebar;
-import org.aerie.forest.core.element.rebar.singleton.bootable.timecrystal.TimeCrystal;
-import org.aerie.forest.core.element.rebar.singleton.bootable.timecrystal.TimeCrystalStorage;
+import org.aerie.forest.core.element.rebar.bootable.timecrystal.TimeCrystal;
 import org.aerie.forest.core.init.ForestInit;
 import org.aerie.forest.framework.ForestFactory;
 import org.aerie.forest.framework.ForestRebarFactoryType;
@@ -24,12 +23,20 @@ public class AppTest {
 
 	public static void main(String[] args) {
 		ForestInit.INSTANCE.loadLogConfig();
-		TimeCrystal.getInstance().isLegal(null);
 //		ForestInit.INSTANCE.loadLogConfig();
-//		TimeCrystal forestRebarFactory = ForestFactory.INSTANCE
-//				.getForestRebarFactory(ForestRebarFactoryType.TIME_CRYSTAL);
+		TimeCrystal forestRebarFactory = ForestFactory.INSTANCE
+				.getForestRebarFactory(ForestRebarFactoryType.TIME_CRYSTAL);
+		try {
+			forestRebarFactory.run();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+//		FileTool f = new FileTool();
+
 //		ForestRebarFactoryType d = new ForestRebarFactoryType();
 //		try {
+		
 //			forestRebarFactory.run();
 //		} catch (Exception e) {
 //			// TODO Auto-generated catch block
