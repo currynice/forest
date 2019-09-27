@@ -26,8 +26,8 @@ public class AppTest {
 	public static void main(String[] args) {
 		ForestInit.INSTANCE.loadLogConfig();
 //		ForestInit.INSTANCE.loadLogConfig();
-		TimeCrystal forestRebarFactory = ForestFactory.INSTANCE
-				.getForestRebarFactory(ForestRebarFactoryType.TIME_CRYSTAL);
+		UuidPool forestRebarFactory = ForestFactory.INSTANCE
+				.getForestRebarFactory(ForestRebarFactoryType.UUID_POOL);
 		try {
 			forestRebarFactory.run();
 		} catch (Exception e) {
