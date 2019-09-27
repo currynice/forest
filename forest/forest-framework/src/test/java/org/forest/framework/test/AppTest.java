@@ -1,4 +1,4 @@
-package org.aerie.forest.core.test;
+package org.forest.framework.test;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
@@ -14,9 +14,9 @@ import org.aerie.forest.core.element.rebar.ForestRebar;
 import org.aerie.forest.core.element.rebar.bootable.timecrystal.TimeCrystal;
 import org.aerie.forest.core.element.rebar.bootable.uuidpool.UuidPool;
 import org.aerie.forest.core.element.rebar.tool.file.FileTool;
-import org.aerie.forest.core.factory.container.ForestFactory;
-import org.aerie.forest.core.factory.container.ForestRebarFactoryType;
 import org.aerie.forest.core.init.ForestInit;
+import org.forest.framework.ForestFactory;
+import org.forest.framework.ForestRebarFactoryType;
 
 /**
  * Unit test for simple App.
@@ -26,9 +26,10 @@ public class AppTest {
 	public static void main(String[] args) {
 		ForestInit.INSTANCE.loadLogConfig();
 //		ForestInit.INSTANCE.loadLogConfig();
-		FileTool forestRebarFactory = ForestFactory.INSTANCE.getForestRebarFactory(ForestRebarFactoryType.FILE_TOOL);
+		TimeCrystal forestRebarFactory = ForestFactory.INSTANCE
+				.getForestRebarFactory(ForestRebarFactoryType.TIME_CRYSTAL);
 		try {
-			forestRebarFactory.ss();
+			forestRebarFactory.run();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
