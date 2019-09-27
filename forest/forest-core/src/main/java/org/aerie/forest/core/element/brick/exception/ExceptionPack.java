@@ -22,9 +22,7 @@ public class ExceptionPack extends Exception {
 	/**
 	 * 异常的等级
 	 */
-	private ExceptionGradeEnum exceptionGradeEnum = null;
-//			ConfigProcessor.INSTANCE.getForestConfig().getExceptionConfig()
-//			.getDefaultExceptionGrade();
+	private ExceptionGradeEnum exceptionGradeEnum = ExceptionGradeEnum.WARN;
 	/**
 	 * 是否弹窗
 	 */

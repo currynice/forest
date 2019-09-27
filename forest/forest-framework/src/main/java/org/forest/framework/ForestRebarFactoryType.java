@@ -3,6 +3,7 @@ package org.forest.framework;
 import org.aerie.forest.core.element.rebar.ForestRebarCategory;
 import org.aerie.forest.core.element.rebar.bootable.timecrystal.TimeCrystal;
 import org.aerie.forest.core.element.rebar.bootable.uuidpool.UuidPool;
+import org.aerie.forest.core.element.rebar.processer.exception.ExceptionProcessor;
 import org.aerie.forest.core.element.rebar.tool.file.FileTool;
 
 /**
@@ -52,6 +53,11 @@ public final class ForestRebarFactoryType {
 	 * UUID池类
 	 */
 	public final static RebarType<UuidPool> UUID_POOL = new RebarType<>(ForestRebarCategory.UUID_POOL);
+	/**
+	 * 分层异常处理器
+	 */
+	public final static RebarType<ExceptionProcessor> EXCRPTION_PROCESSOR = new RebarType<>(
+			ForestRebarCategory.EXCRPTION_PROCESSOR);
 	/**
 	 * File工具
 	 */

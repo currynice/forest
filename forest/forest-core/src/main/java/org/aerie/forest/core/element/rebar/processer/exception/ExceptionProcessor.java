@@ -27,9 +27,7 @@ public final class ExceptionProcessor extends ForestProcessor {
 	/**
 	 * 默认异常等级
 	 */
-	private ExceptionGradeEnum defaultExceptionGrade = null;
-//			ConfigProcessor.INSTANCE.getForestConfig().getExceptionConfig()
-//			.getDefaultExceptionGrade();
+	private ExceptionGradeEnum defaultExceptionGrade = ExceptionGradeEnum.WARN;
 
 	/**
 	 * 
@@ -300,5 +298,4 @@ public final class ExceptionProcessor extends ForestProcessor {
 //		}
 	}
 
-	
 }

@@ -7,6 +7,8 @@ import org.aerie.forest.core.element.rebar.bootable.uuidpool.UuidPool;
 import org.aerie.forest.core.element.rebar.bootable.uuidpool.UuidPoolStorage;
 import org.aerie.forest.core.element.rebar.tool.file.FileToolStorage;
 import org.aerie.forest.core.element.rebar.tool.file.FileTool;
+import org.aerie.forest.core.element.rebar.processer.exception.ExceptionProcessor;
+import org.aerie.forest.core.element.rebar.processer.exception.ExceptionProcessorStorage;
 
 /**
  * 
@@ -20,6 +22,8 @@ import org.aerie.forest.core.element.rebar.tool.file.FileTool;
 public enum ForestRebarCategory {
 	TIME_CRYSTAL("时间晶振", TimeCrystal.class, TimeCrystalStorage.getInstance(), ForestRebarContainerCategory.BOOTABLE),
 	UUID_POOL("UUID池", UuidPool.class, UuidPoolStorage.getInstance(), ForestRebarContainerCategory.BOOTABLE),
+	EXCRPTION_PROCESSOR("分层异常处理器", ExceptionProcessor.class, ExceptionProcessorStorage.getInstance(),
+			ForestRebarContainerCategory.PROCESSER),
 	FILE_TOOL("File工具", FileTool.class, FileToolStorage.getInstance(), ForestRebarContainerCategory.TOOL);
 	/**
 	 * 类型的名称
