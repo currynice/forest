@@ -55,6 +55,10 @@ public final class FileTool extends ForestTool {
 		return fileTool;
 	}
 
+	public void ss() {
+		System.out.println("ssssssssssssssssssssssssssssssss");
+	}
+
 	/**
 	 * 
 	 * @description yaml文件的解析

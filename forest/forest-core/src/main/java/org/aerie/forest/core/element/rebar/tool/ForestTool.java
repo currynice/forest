@@ -17,7 +17,7 @@ public abstract class ForestTool extends ForestRebar {
 	}
 
 	@Override
-	public void addLedalCheck() {
+	protected void addLedalCheck() {
 
 	}
 }

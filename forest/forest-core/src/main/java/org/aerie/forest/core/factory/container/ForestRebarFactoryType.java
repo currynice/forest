@@ -52,7 +52,9 @@ public final class ForestRebarFactoryType {
 	 * UUID池类
 	 */
 	public final static RebarType<UuidPool> UUID_POOL = new RebarType<>(ForestRebarCategory.UUID_POOL);
-
+	/**
+	 * File工具
+	 */
 	public final static RebarType<FileTool> FILE_TOOL = new RebarType<>(ForestRebarCategory.FILE_TOOL);
 
 }

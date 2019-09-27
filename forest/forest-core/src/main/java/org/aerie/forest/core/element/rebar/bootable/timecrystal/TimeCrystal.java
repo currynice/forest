@@ -116,11 +116,11 @@ public final class TimeCrystal extends ForestBootable {
 		// TODO Auto-generated method stub
 		return true;
 	}
-	
+
 	/**
 	 * 添加校验法则
 	 */
-	public void addLedalCheck() {
+	protected void addLedalCheck() {
 		super.addLedalCheck();
 		forestRebarLedalChecks.add(new ForestRebarLedalCheck() {
 

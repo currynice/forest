@@ -31,7 +31,6 @@ public enum ForestFactory {
 		/**
 		 * 根据forest架构元素工厂的类别返回对应架构元素
 		 */
-		return (T) ForestContainer.INSTANCE
-				.getForestRebar(ForestRebarFactoryType.TIME_CRYSTAL.getForestRebarCategory());
+		return (T) ForestContainer.INSTANCE.getForestRebar(rebarType.getForestRebarCategory());
 	}
 }

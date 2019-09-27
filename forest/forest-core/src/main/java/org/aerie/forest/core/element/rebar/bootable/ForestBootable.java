@@ -318,7 +318,7 @@ public abstract class ForestBootable extends ForestRebar implements BootProcesso
 	/**
 	 * 添加校验法则
 	 */
-	public void addLedalCheck() {
+	protected void addLedalCheck() {
 		forestRebarLedalChecks.add(new ForestRebarLedalCheck() {
 
 			@Override

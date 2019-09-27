@@ -107,7 +107,7 @@ public abstract class ForestRebar {
 	 * @version 1.0.1
 	 * @param forestRebar
 	 */
-	public final void isLegal(ForestRebar forestRebar) {
+	protected final void isLegal(ForestRebar forestRebar) {
 		// 校验所有的校验法则
 		forestRebar.getForestRebarLedalChecks().stream().filter(p1 -> p1 != null)
 				.forEach(p2 -> p2.isLegal(forestRebar));
@@ -121,5 +121,5 @@ public abstract class ForestRebar {
 	 * @date 2019年9月27日下午1:46:42
 	 * @version 1.0.1
 	 */
-	public abstract void addLedalCheck();
+	protected abstract void addLedalCheck();
 }
