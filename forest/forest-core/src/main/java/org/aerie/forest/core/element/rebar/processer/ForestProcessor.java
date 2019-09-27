@@ -15,4 +15,9 @@ public abstract class ForestProcessor extends ForestRebar {
 	protected ForestProcessor() {
 		super();
 	}
+
+	@Override
+	public void addLedalCheck() {
+
+	}
 }

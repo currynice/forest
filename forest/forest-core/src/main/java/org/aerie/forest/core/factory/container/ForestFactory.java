@@ -1,7 +1,7 @@
-package org.aerie.forest.framework;
+package org.aerie.forest.core.factory.container;
 
 import org.aerie.forest.core.factory.container.ForestContainer;
-import org.aerie.forest.framework.ForestRebarFactoryType.RebarType;
+import org.aerie.forest.core.factory.container.ForestRebarFactoryType.RebarType;
 
 /**
  * 

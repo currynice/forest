@@ -12,8 +12,12 @@ import org.aerie.forest.core.element.rebar.ForestRebar;
  */
 public abstract class ForestTool extends ForestRebar {
 
-	protected ForestTool() throws Exception {
+	protected ForestTool() {
 		super();
 	}
 
+	@Override
+	public void addLedalCheck() {
+
+	}
 }

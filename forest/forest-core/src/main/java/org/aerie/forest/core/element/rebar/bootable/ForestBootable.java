@@ -10,6 +10,7 @@ import org.aerie.forest.core.element.brick.exception.ExceptionGradeEnum;
 import org.aerie.forest.core.element.brick.exception.ExceptionPack;
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
 import org.aerie.forest.core.element.rebar.ForestRebar;
+import org.aerie.forest.core.element.rebar.ForestRebarLedalCheck;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -313,4 +314,18 @@ public abstract class ForestBootable extends ForestRebar implements BootProcesso
 	 * 处理异常
 	 */
 	protected abstract void disposeException(Exception exception);
+
+	/**
+	 * 添加校验法则
+	 */
+	public void addLedalCheck() {
+		forestRebarLedalChecks.add(new ForestRebarLedalCheck() {
+
+			@Override
+			public void isLegal(ForestRebar forestRebar) {
+				System.out.println("开始校验规则二");
+
+			}
+		});
+	}
 }

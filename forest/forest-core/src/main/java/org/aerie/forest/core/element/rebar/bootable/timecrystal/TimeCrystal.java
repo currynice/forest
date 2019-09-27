@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
 import org.aerie.forest.core.element.rebar.ForestRebar;
+import org.aerie.forest.core.element.rebar.ForestRebarLedalCheck;
 import org.aerie.forest.core.element.rebar.bootable.ForestBootable;
 
 /**
@@ -114,6 +115,21 @@ public final class TimeCrystal extends ForestBootable {
 	protected boolean customAllowStart() {
 		// TODO Auto-generated method stub
 		return true;
+	}
+	
+	/**
+	 * 添加校验法则
+	 */
+	public void addLedalCheck() {
+		super.addLedalCheck();
+		forestRebarLedalChecks.add(new ForestRebarLedalCheck() {
+
+			@Override
+			public void isLegal(ForestRebar forestRebar) {
+				System.out.println("开始校验规则三");
+
+			}
+		});
 	}
 
 }

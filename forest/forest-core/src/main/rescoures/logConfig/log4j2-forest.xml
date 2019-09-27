@@ -16,7 +16,7 @@
 			<!--输出日志的格式 -->
 			<!-- 彩色打印 -->
 			<PatternLayout
-				pattern="%highlight{&lt;%-6t&gt;}%highlight{[%-6p]||%marker}  %-12d %highlight{|\t\t\t\t\t\t\t\t——&gt;\t%-m &lt;————————————&gt;%x%n}%highlight{\t\t==  %l%n}" />
+				pattern="%highlight{&lt;%-9t&gt;}%highlight{[%-6p]||%marker}  %-12d %highlight{|\t\t\t\t\t\t\t\t——&gt;\t%-m &lt;————————————&gt;%x%n}%highlight{\t\t==  %l%n}" />
 			<!--黑白打印 -->
 			<!-- <PatternLayout pattern="&lt;%-6t&gt;[%-6p]|| %-12d{HH:mm:ss SSS} 
 				|\t\t\t\t\t\t\t\t——&gt;\t%-m &lt;————————————&gt;%x%n\t\t== %l%n" /> -->
@@ -32,7 +32,7 @@
 			<!--输出日志的格式 -->
 			<!-- 彩色打印 -->
 			<PatternLayout
-				pattern="%highlight{&lt;%-6t&gt;}%highlight{[%-6p]||%marker}  %-12d |\t\t\t\t\t\t\t\t——&gt;\t%highlight{%-m &lt;————————————&gt;%x%n}" />
+				pattern="%highlight{&lt;%-9t&gt;}%highlight{[%-6p]||%marker}  %-12d |\t\t\t\t\t\t\t\t——&gt;\t%highlight{%-m &lt;————————————&gt;%x%n}" />
 			<!--黑白打印 -->
 			<!-- <PatternLayout pattern="&lt;%-6t&gt;[%-6p]|| %-12d{HH:mm:ss SSS} 
 				|\t\t\t\t\t\t\t\t——&gt;\t%-m &lt;————————————&gt;%x%n" /> -->
@@ -60,7 +60,7 @@
 			<!--输出日志的格式 -->
 			<!-- 彩色打印 -->
 			<PatternLayout
-				pattern="%highlight{&lt;%-6t&gt;}%d%highlight{[%-6p]}\t%highlight{  %l}\t——&gt;\t%highlight{%m}%n" />
+				pattern="%highlight{&lt;%-9t&gt;}%d%highlight{[%-6p]}\t%highlight{  %l}\t——&gt;\t%highlight{%m}%n" />
 			<!--黑白打印 -->
 			<!-- <PatternLayout pattern="%m%n" /> -->
 		</Console>
@@ -70,7 +70,7 @@
 			fileName="target/rollinglogs/log.log"
 			filePattern="log/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
 			<PatternLayout
-				pattern="&lt;%-6t&gt;[%-6p]||%marker  %-12d{HH:mm:ss SSS} |\t\t\t\t\t\t\t\t——&gt;\t%-m &lt;————————————&gt;%x%n\t\t==  %l%n" />
+				pattern="&lt;%-9t&gt;[%-6p]||%marker  %-12d{HH:mm:ss SSS} |\t\t\t\t\t\t\t\t——&gt;\t%-m &lt;————————————&gt;%x%n\t\t==  %l%n" />
 			<SizeBasedTriggeringPolicy size="50MB" />
 			<!-- DefaultRolloverStrategy属性如不设置，则默认为最多同一文件夹下7个文件，这里设置了20 -->
 			<DefaultRolloverStrategy max="20" />
@@ -79,7 +79,7 @@
 			fileName="target/rollinglogs/exceptionlog.log"
 			filePattern="log/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
 			<PatternLayout
-				pattern="&lt;%-6t&gt;[%-6p]||%marker  %-12d |\t\t\t\t\t\t\t\t——&gt;\t%-m &lt;————————————&gt;%x%n" />
+				pattern="&lt;%-9t&gt;[%-6p]||%marker  %-12d |\t\t\t\t\t\t\t\t——&gt;\t%-m &lt;————————————&gt;%x%n" />
 			<SizeBasedTriggeringPolicy size="50MB" />
 			<!-- DefaultRolloverStrategy属性如不设置，则默认为最多同一文件夹下7个文件，这里设置了20 -->
 			<DefaultRolloverStrategy max="20" />
@@ -97,12 +97,12 @@
 		<File name="CacheFile" fileName="target/cachelogs/log.log"
 			append="false">
 			<PatternLayout
-				pattern="&lt;%-6t&gt;[%-6p]||%marker  %-12d |\t\t\t\t\t\t\t\t——&gt;\t%-m &lt;————————————&gt;%x%n\t\t==  %l%n" />
+				pattern="&lt;%-9t&gt;[%-6p]||%marker  %-12d |\t\t\t\t\t\t\t\t——&gt;\t%-m &lt;————————————&gt;%x%n\t\t==  %l%n" />
 		</File>
 		<File name="ExceptionCacheFile"
 			fileName="target/cachelogs/exceptionlog.log" append="false">
 			<PatternLayout
-				pattern="&lt;%-6t&gt;[%-6p]||%marker  %-12d |\t\t\t\t\t\t\t\t——&gt;\t%-m &lt;————————————&gt;%x%n" />
+				pattern="&lt;%-9t&gt;[%-6p]||%marker  %-12d |\t\t\t\t\t\t\t\t——&gt;\t%-m &lt;————————————&gt;%x%n" />
 		</File>
 		<File name="ExcStackTraceCacheFile"
 			fileName="target/cachelogs/exceptionlog.log" append="false">

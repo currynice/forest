@@ -29,7 +29,8 @@ public abstract class ForestRebarStorage<T extends ForestRebar> {
 	 */
 	public void putInStorage() throws Exception {
 		T t = getForestRebar();
-		t.isLegal();
+		t.addLedalCheck();
+		t.isLegal(t);
 		ForestContainer.INSTANCE.addForestRebar(t);
 	}
 

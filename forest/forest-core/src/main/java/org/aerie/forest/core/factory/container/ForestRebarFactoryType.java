@@ -1,8 +1,9 @@
-package org.aerie.forest.framework;
+package org.aerie.forest.core.factory.container;
 
 import org.aerie.forest.core.element.rebar.ForestRebarCategory;
 import org.aerie.forest.core.element.rebar.bootable.timecrystal.TimeCrystal;
 import org.aerie.forest.core.element.rebar.bootable.uuidpool.UuidPool;
+import org.aerie.forest.core.element.rebar.tool.file.FileTool;
 
 /**
  * 
@@ -51,5 +52,7 @@ public final class ForestRebarFactoryType {
 	 * UUID池类
 	 */
 	public final static RebarType<UuidPool> UUID_POOL = new RebarType<>(ForestRebarCategory.UUID_POOL);
+
+	public final static RebarType<FileTool> FILE_TOOL = new RebarType<>(ForestRebarCategory.FILE_TOOL);
 
 }

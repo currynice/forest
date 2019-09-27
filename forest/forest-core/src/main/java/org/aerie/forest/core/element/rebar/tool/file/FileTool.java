@@ -5,6 +5,8 @@ import java.util.Hashtable;
 import java.util.Map;
 
 import org.aerie.forest.core.element.brick.exception.CustomException;
+import org.aerie.forest.core.element.brick.log.GlobalLogger;
+import org.aerie.forest.core.element.rebar.bootable.timecrystal.TimeCrystal;
 import org.aerie.forest.core.element.rebar.tool.ForestTool;
 import org.yaml.snakeyaml.Yaml;
 
@@ -18,9 +20,39 @@ import org.yaml.snakeyaml.Yaml;
  */
 public final class FileTool extends ForestTool {
 
-	protected FileTool() throws Exception {
-		super();
-		// TODO Auto-generated constructor stub
+	/**
+	 * 单例
+	 */
+	private static FileTool fileTool;
+
+	private FileTool() {
+		synchronized (FileTool.class) {
+			if (singletonFlag == true) {
+				throw new RuntimeException(forestRebarName + "受到反射攻击");
+			}
+			singletonFlag = true;
+			GlobalLogger.INSTANCE.getLOGGER().info("【单例】" + forestRebarName + "初始化");
+		}
+	}
+
+	/**
+	 * 
+	 * @description 获得单例
+	 * @return
+	 * @throws Exception
+	 */
+	protected final static FileTool getInstance() {
+		/**
+		 * 双重锁
+		 */
+		if (fileTool == null) {
+			synchronized (TimeCrystal.class) {
+				if (fileTool == null) {
+					fileTool = new FileTool();
+				}
+			}
+		}
+		return fileTool;
 	}
 
 	/**
@@ -30,7 +62,7 @@ public final class FileTool extends ForestTool {
 	 * @param filePath
 	 * @throws ExceptionPack
 	 */
-	public static Object analyzeYamlByClass(InputStream inputStream, Class<?> zClass) throws CustomException {
+	public Object analyzeYamlByClass(InputStream inputStream, Class<?> zClass) throws CustomException {
 		if (null == inputStream)
 			throw new CustomException("yaml文件流为空");
 		Yaml yaml = new Yaml();
@@ -45,7 +77,7 @@ public final class FileTool extends ForestTool {
 	 * @return
 	 * @throws ExceptionPack
 	 */
-	public static Map<?, ?> analyzeYamlToMap(InputStream inputStream) throws CustomException {
+	public Map<?, ?> analyzeYamlToMap(InputStream inputStream) throws CustomException {
 
 		return (Map<?, ?>) analyzeYamlByClass(inputStream, Map.class);
 	}
@@ -58,7 +90,7 @@ public final class FileTool extends ForestTool {
 	 * @return
 	 * @throws ExceptionPack
 	 */
-	public static Hashtable<?, ?> analyzeYamlToHashtable(InputStream inputStream) throws CustomException {
+	public Hashtable<?, ?> analyzeYamlToHashtable(InputStream inputStream) throws CustomException {
 
 		return (Hashtable<?, ?>) analyzeYamlByClass(inputStream, Hashtable.class);
 	}

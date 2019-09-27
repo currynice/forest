@@ -1,4 +1,4 @@
-package org.aerie.forest.framework.test;
+package org.aerie.forest.core.test;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
@@ -12,9 +12,9 @@ import org.aerie.forest.core.element.brick.exception.ExceptionGradeEnum;
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
 import org.aerie.forest.core.element.rebar.ForestRebar;
 import org.aerie.forest.core.element.rebar.bootable.timecrystal.TimeCrystal;
+import org.aerie.forest.core.factory.container.ForestFactory;
+import org.aerie.forest.core.factory.container.ForestRebarFactoryType;
 import org.aerie.forest.core.init.ForestInit;
-import org.aerie.forest.framework.ForestFactory;
-import org.aerie.forest.framework.ForestRebarFactoryType;
 
 /**
  * Unit test for simple App.
@@ -22,23 +22,23 @@ import org.aerie.forest.framework.ForestRebarFactoryType;
 public class AppTest {
 
 	public static void main(String[] args) {
+		ForestInit.INSTANCE.loadLogConfig();
 //		ForestInit.INSTANCE.loadLogConfig();
-////		ForestInit.INSTANCE.loadLogConfig();
-//		TimeCrystal forestRebarFactory = ForestFactory.INSTANCE
-//				.getForestRebarFactory(ForestRebarFactoryType.TIME_CRYSTAL);
-//		try {
-//			forestRebarFactory.run();
-//		} catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-		AAA a = new AAA();
-		CCC c = new CCC();
-		List<String> s = AAA.s;
-		System.out.println("--------------------");
-		for (String ss : s) {
-			System.out.println(ss);
+		TimeCrystal forestRebarFactory = ForestFactory.INSTANCE
+				.getForestRebarFactory(ForestRebarFactoryType.TIME_CRYSTAL);
+		try {
+			forestRebarFactory.run();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+//		System.out.println("");
+//		CCC c = new CCC();
+//		c.sSS();
+//		List<String> s = c.getS();
+//		for (String ss : s) {
+//			System.out.println(ss);
+//		}
 //		FileTool f = new FileTool();
 
 //		ForestRebarFactoryType d = new ForestRebarFactoryType();

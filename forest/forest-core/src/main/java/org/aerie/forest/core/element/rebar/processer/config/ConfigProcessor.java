@@ -8,7 +8,8 @@ import org.aerie.forest.core.element.brick.log.GlobalLogger;
 import org.aerie.forest.core.element.rebar.bootable.timecrystal.TimeCrystal;
 import org.aerie.forest.core.element.rebar.processer.ForestProcessor;
 import org.aerie.forest.core.element.rebar.processer.config.container.ForestConfig;
-import org.aerie.forest.core.element.rebar.tool.FileTool;
+import org.aerie.forest.core.factory.container.ForestFactory;
+import org.aerie.forest.core.factory.container.ForestRebarFactoryType;
 
 /**
  * 
@@ -84,9 +85,10 @@ public final class ConfigProcessor extends ForestProcessor {
 	public void loadConfig() {
 		// 加载配置文件【流加载】
 		try {
-			ForestConfig forestConfig = (ForestConfig) FileTool.INSTANCE.analyzeYamlByClass(
-					this.getClass().getClassLoader().getResourceAsStream(CONFIG_PATH + DEFAULT_CONFIG_PATH_YAML),
-					ForestConfig.class);
+			ForestConfig forestConfig = (ForestConfig) ForestFactory.INSTANCE
+					.getForestRebarFactory(ForestRebarFactoryType.FILE_TOOL).analyzeYamlByClass(this.getClass()
+							.getClassLoader().getResourceAsStream(CONFIG_PATH + DEFAULT_CONFIG_PATH_YAML),
+							ForestConfig.class);
 			List<String> fieldsNameIsNull = forestConfig.getFieldsNameIsNull();
 			if (fieldsNameIsNull != null && !fieldsNameIsNull.isEmpty()) {
 				throw new CustomException(fieldsNameIsNull.toString() + "这些配置文件的属性为空");
