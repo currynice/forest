@@ -1,5 +1,6 @@
 package org.forest.framework.test;
 
+import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
@@ -19,22 +20,71 @@ import org.apache.logging.log4j.core.Logger;
 import org.forest.framework.ForestFactory;
 import org.forest.framework.ForestRebarFactoryType;
 
+import javassist.CannotCompileException;
+import javassist.ClassPool;
+import javassist.CtClass;
+import javassist.CtField;
+import javassist.NotFoundException;
+import javassist.bytecode.ClassFile;
+import javassist.bytecode.ConstPool;
+import javassist.bytecode.FieldInfo;
+
 /**
  * Unit test for simple App.
  */
 public class AppTest {
 
 	public static void main(String[] args) {
-		ForestInit.INSTANCE.loadLogConfig();
-//		ForestInit.INSTANCE.loadLogConfig();
-		TimeCrystal forestRebarFactory = ForestFactory.INSTANCE
-				.getForestRebarFactory(ForestRebarFactoryType.TIME_CRYSTAL);
+		ClassPool pool = ClassPool.getDefault();
+		CtClass clazz = pool.makeClass("org.forest.framework.test.Tcxfz");
+		ClassFile ccFile = clazz.getClassFile();
+		ConstPool constpool = ccFile.getConstPool();
+		CtClass executor = null;
 		try {
-			forestRebarFactory.run();
-		} catch (Exception e) {
+			executor = pool.get("javassist.bytecode.analysis.Executor");
+		} catch (NotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		String fieldName = "sss";
+		// 增加字段
+		CtField field = null;
+		try {
+			field = new CtField(executor, fieldName, clazz);
+		} catch (CannotCompileException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		field.setModifiers(Modifier.PUBLIC);
+//		FieldInfo fieldInfo = field.getFieldInfo();
+		try {
+			clazz.addField(field);
+		} catch (CannotCompileException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try {
+			clazz.writeFile();
+		} catch (NotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (CannotCompileException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+//		ForestInit.INSTANCE.loadLogConfig();
+////		ForestInit.INSTANCE.loadLogConfig();
+//		TimeCrystal forestRebarFactory = ForestFactory.INSTANCE
+//				.getForestRebarFactory(ForestRebarFactoryType.TIME_CRYSTAL);
+//		try {
+//			forestRebarFactory.run();
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 //		System.out.println("");
 //		CCC c = new CCC();
 //		c.sSS();
