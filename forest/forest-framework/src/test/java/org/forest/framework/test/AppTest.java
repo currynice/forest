@@ -15,6 +15,7 @@ import org.aerie.forest.core.element.rebar.bootable.timecrystal.TimeCrystal;
 import org.aerie.forest.core.element.rebar.bootable.uuidpool.UuidPool;
 import org.aerie.forest.core.element.rebar.tool.file.FileTool;
 import org.aerie.forest.core.init.ForestInit;
+import org.apache.logging.log4j.core.Logger;
 import org.forest.framework.ForestFactory;
 import org.forest.framework.ForestRebarFactoryType;
 
@@ -26,8 +27,8 @@ public class AppTest {
 	public static void main(String[] args) {
 		ForestInit.INSTANCE.loadLogConfig();
 //		ForestInit.INSTANCE.loadLogConfig();
-		UuidPool forestRebarFactory = ForestFactory.INSTANCE
-				.getForestRebarFactory(ForestRebarFactoryType.UUID_POOL);
+		TimeCrystal forestRebarFactory = ForestFactory.INSTANCE
+				.getForestRebarFactory(ForestRebarFactoryType.TIME_CRYSTAL);
 		try {
 			forestRebarFactory.run();
 		} catch (Exception e) {
