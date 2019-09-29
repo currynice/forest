@@ -24,6 +24,7 @@ public enum ForestRebarContainerCategory {
 	// 工具
 	TOOL(new ForestRebarContainer<ForestTool>() {
 	});
+
 	/**
 	 * forest架构元素容器
 	 */

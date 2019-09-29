@@ -121,7 +121,12 @@ public enum ForestContainer {
 				throw new Error("无法从容器中取出对应的架构元素");
 			}
 			// 通过throw new Error("forest容器崩溃");
-			forestRebarCategory.executeStorage();
+			try {
+				// 执行入库指令
+				forestRebarCategory.getForestRebarStorage().putInStorage();
+			} catch (Exception e) {
+				throw new Error(forestRebarCategory.getTypeName() + "执行入库组件失败\ncaused by:" + e.getMessage());
+			}
 			return getForestRebar(forestRebarCategory, false);
 		}
 		return collect.get(0);

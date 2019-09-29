@@ -20,11 +20,14 @@ import org.aerie.forest.core.element.rebar.processer.exception.ExceptionProcesso
  *
  */
 public enum ForestRebarCategory {
-	TIME_CRYSTAL("时间晶振", TimeCrystal.class, TimeCrystalStorage.getInstance(), ForestRebarContainerCategory.BOOTABLE),
-	UUID_POOL("UUID池", UuidPool.class, UuidPoolStorage.getInstance(), ForestRebarContainerCategory.BOOTABLE),
-	EXCRPTION_PROCESSOR("分层异常处理器", ExceptionProcessor.class, ExceptionProcessorStorage.getInstance(),
-			ForestRebarContainerCategory.PROCESSER),
-	FILE_TOOL("File工具", FileTool.class, FileToolStorage.getInstance(), ForestRebarContainerCategory.TOOL);
+	TIME_CRYSTAL("时间晶振", "org.aerie.forest.core.element.rebar.bootable.timecrystal.TimeCrystal",
+			TimeCrystalStorage.getInstance(), ForestRebarContainerCategory.BOOTABLE),
+	UUID_POOL("UUID池", "org.aerie.forest.core.element.rebar.bootable.uuidpool.UuidPool", UuidPoolStorage.getInstance(),
+			ForestRebarContainerCategory.BOOTABLE),
+	EXCRPTION_PROCESSOR("异常处理器", "org.aerie.forest.core.element.rebar.processer.exception.ExceptionProcessor",
+			ExceptionProcessorStorage.getInstance(), ForestRebarContainerCategory.PROCESSER),
+	FILE_TOOL("File工具", "org.aerie.forest.core.element.rebar.tool.file.FileTool", FileToolStorage.getInstance(),
+			ForestRebarContainerCategory.TOOL);
 	/**
 	 * 类型的名称
 	 */
@@ -32,18 +35,19 @@ public enum ForestRebarCategory {
 	/**
 	 * 架构元素类
 	 */
-	private Class<? extends ForestRebar> forestRebarClass;
+	private String forestRebarClass;
 	/**
 	 * 架构元素入库组件
 	 */
 	private ForestRebarStorage<?> forestRebarStorage;
 	/**
+	 * 
 	 * forest架构元素属于的容器
 	 */
 	private ForestRebarContainerCategory forestRebarContainerCategory;
 
-	private ForestRebarCategory(String typeName, Class<? extends ForestRebar> forestRebarClass,
-			ForestRebarStorage<?> forestRebarStorage, ForestRebarContainerCategory forestRebarContainerCategory) {
+	private ForestRebarCategory(String typeName, String forestRebarClass, ForestRebarStorage<?> forestRebarStorage,
+			ForestRebarContainerCategory forestRebarContainerCategory) {
 		this.typeName = typeName;
 		this.forestRebarClass = forestRebarClass;
 		this.forestRebarStorage = forestRebarStorage;
@@ -54,8 +58,13 @@ public enum ForestRebarCategory {
 		return typeName;
 	}
 
+	@SuppressWarnings("unchecked")
 	public Class<? extends ForestRebar> getForestRebarClass() {
-		return forestRebarClass;
+		try {
+			return (Class<? extends ForestRebar>) Class.forName(forestRebarClass);
+		} catch (ClassNotFoundException e) {
+			throw new Error("无法找到" + typeName + "的类");
+		}
 	}
 
 	public ForestRebarStorage<?> getForestRebarStorage() {
@@ -64,21 +73,5 @@ public enum ForestRebarCategory {
 
 	public ForestRebarContainerCategory getForestRebarContainerCategory() {
 		return forestRebarContainerCategory;
-	}
-
-	/**
-	 * 
-	 * @description 执行入库组件
-	 * @author falconTrotk
-	 * @company aerie
-	 * @date 2019年9月25日下午4:19:10
-	 * @version 1.0.1
-	 */
-	public void executeStorage() {
-		try {
-			forestRebarStorage.putInStorage();
-		} catch (Exception e) {
-			throw new Error(typeName + "执行入库组件失败\ncaused by:" + e.getMessage());
-		}
 	}
 }

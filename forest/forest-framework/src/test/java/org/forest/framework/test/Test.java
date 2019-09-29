@@ -8,7 +8,7 @@ import org.aerie.forest.core.element.brick.exception.ExceptionPack;
 import org.aerie.forest.core.element.rebar.processer.exception.ExceptionProcessor;
 import org.aerie.forest.core.init.ForestInit;
 import org.forest.framework.ForestFactory;
-import org.forest.framework.ForestRebarFactoryType;
+import org.forest.framework.ForestRebarShelf;
 
 public class Test {
 	public static void main(String[] args) {
@@ -16,9 +16,9 @@ public class Test {
 		try {
 			s1();
 		} catch (Exception e) {
-			ExceptionProcessor forestRebarFactory = ForestFactory.INSTANCE
-					.getForestRebarFactory(ForestRebarFactoryType.EXCRPTION_PROCESSOR);
-			forestRebarFactory.recordException("我是直接原因", e);
+//			ExceptionProcessor forestRebarFactory = ForestFactory.INSTANCE
+//					.getForestRebarFactory(ForestRebarShelf.getInstance().);
+//			forestRebarFactory.recordException("我是直接原因", e);
 		}
 	}
 
