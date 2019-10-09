@@ -61,7 +61,7 @@ public final class TimeCrystal extends ForestBootable {
 	 * @return
 	 * @throws Exception
 	 */
-	protected final static TimeCrystal getInstance() {
+	protected static TimeCrystal getInstance() {
 		/**
 		 * 双重锁
 		 */

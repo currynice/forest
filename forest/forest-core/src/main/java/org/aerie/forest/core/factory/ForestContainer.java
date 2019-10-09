@@ -1,4 +1,4 @@
-package org.aerie.forest.core.factory.container;
+package org.aerie.forest.core.factory;
 
 import java.util.HashMap;
 import java.util.List;
@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
 import org.aerie.forest.core.element.rebar.ForestRebar;
-import org.aerie.forest.core.element.rebar.ForestRebarCategory;
+import org.aerie.forest.core.factory.ForestRebarShelf.RebarScutcheon;
 
 /**
  * 
@@ -87,8 +87,8 @@ public enum ForestContainer {
 	 * @param forestRebarContainerCategory
 	 * @return
 	 */
-	public ForestRebar getForestRebar(ForestRebarCategory forestRebarCategory) {
-		return getForestRebar(forestRebarCategory, true);
+	public ForestRebar getForestRebar(RebarScutcheon<?> rebarScutcheon) {
+		return getForestRebar(rebarScutcheon, true);
 	}
 
 	/**
@@ -101,16 +101,16 @@ public enum ForestContainer {
 	 * @param forestRebarContainerCategory
 	 * @return
 	 */
-	private ForestRebar getForestRebar(ForestRebarCategory forestRebarCategory, boolean first) {
+	private ForestRebar getForestRebar(RebarScutcheon<?> rebarScutcheon, boolean first) {
 		// 获得需要取出的架构元素所在的容器的类型
-		Class<? extends ForestRebar> zclassOfForestRebarContainer = forestRebarCategory
-				.getForestRebarContainerCategory().getZclass();
+		Class<? extends ForestRebar> zclassOfForestRebarContainer = rebarScutcheon.getForestRebarContainerCategory()
+				.getZclass();
 		// 获得容器中存储对应架构元素的容器
 		List<? extends ForestRebar> forestRebarContainer = forestRebarContainers.get(zclassOfForestRebarContainer)
 				.getContainer();
 		// 获得和要取得的架构元素基本类型相同的对象
 		List<? extends ForestRebar> collect = forestRebarContainer.stream()
-				.filter(p1 -> p1.getClass() == forestRebarCategory.getForestRebarClass()).collect(Collectors.toList());
+				.filter(p1 -> p1.getClass() == rebarScutcheon.getForestRebarClass()).collect(Collectors.toList());
 		// 容器中必须是单例
 		if (collect == null || collect.size() > 1) {
 			throw new Error("forest容器崩溃");
@@ -123,11 +123,11 @@ public enum ForestContainer {
 			// 通过throw new Error("forest容器崩溃");
 			try {
 				// 执行入库指令
-				forestRebarCategory.getForestRebarStorage().putInStorage();
+				rebarScutcheon.getForestRebarStorage().putInStorage();
 			} catch (Exception e) {
-				throw new Error(forestRebarCategory.getTypeName() + "执行入库组件失败\ncaused by:" + e.getMessage());
+				throw new Error(rebarScutcheon.getScutcheonName() + "执行入库组件失败\ncaused by:" + e.getMessage());
 			}
-			return getForestRebar(forestRebarCategory, false);
+			return getForestRebar(rebarScutcheon, false);
 		}
 		return collect.get(0);
 	}

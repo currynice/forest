@@ -16,10 +16,10 @@
 			<!--输出日志的格式 -->
 			<!-- 彩色打印 -->
 			<PatternLayout
-				pattern="%highlight{&lt;%-9t&gt;}%highlight{[%-6p]||%marker}  %-12d %highlight{|\t\t\t\t\t\t\t\t——&gt;\t%-m &lt;————————————&gt;%x%n}%highlight{\t\t   ==  %l%n}" />
+				pattern="%highlight{&lt;%-9t&gt;}%highlight{[%-6p]||%marker}  %-12d %highlight{|\t\t\t\t\t\t\t\t——&gt;\t%-m &lt;————————————&gt;%x%n}%highlight{\t\t==  %l%n}" />
 			<!--黑白打印 -->
 			<!-- <PatternLayout pattern="&lt;%-6t&gt;[%-6p]|| %-12d{HH:mm:ss SSS} 
-				|\t\t\t\t\t\t\t\t——&gt;\t%-m &lt;————————————&gt;%x%n\t\t   == %l%n" /> -->
+				|\t\t\t\t\t\t\t\t——&gt;\t%-m &lt;————————————&gt;%x%n\t\t== %l%n" /> -->
 			<!-- 安装了ANSI，但是关闭的情况下，纯黑打印（解决中文乱码） -->
 		</Console>
 		<!-- 这个异常信息输出控制台的配置(打印异常信息) -->
@@ -70,7 +70,7 @@
 			fileName="target/rollinglogs/log.log"
 			filePattern="log/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
 			<PatternLayout
-				pattern="&lt;%-9t&gt;[%-6p]||%marker  %-12d{HH:mm:ss SSS} |\t\t\t\t\t\t\t\t——&gt;\t%-m &lt;————————————&gt;%x%n\t\t   ==  %l%n" />
+				pattern="&lt;%-9t&gt;[%-6p]||%marker  %-12d{HH:mm:ss SSS} |\t\t\t\t\t\t\t\t——&gt;\t%-m &lt;————————————&gt;%x%n\t\t==  %l%n" />
 			<SizeBasedTriggeringPolicy size="50MB" />
 			<!-- DefaultRolloverStrategy属性如不设置，则默认为最多同一文件夹下7个文件，这里设置了20 -->
 			<DefaultRolloverStrategy max="20" />
@@ -97,7 +97,7 @@
 		<File name="CacheFile" fileName="target/cachelogs/log.log"
 			append="false">
 			<PatternLayout
-				pattern="&lt;%-9t&gt;[%-6p]||%marker  %-12d |\t\t\t\t\t\t\t\t——&gt;\t%-m &lt;————————————&gt;%x%n\t\t   ==  %l%n" />
+				pattern="&lt;%-9t&gt;[%-6p]||%marker  %-12d |\t\t\t\t\t\t\t\t——&gt;\t%-m &lt;————————————&gt;%x%n\t\t==  %l%n" />
 		</File>
 		<File name="ExceptionCacheFile"
 			fileName="target/cachelogs/exceptionlog.log" append="false">

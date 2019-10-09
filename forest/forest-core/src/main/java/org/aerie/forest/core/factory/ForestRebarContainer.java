@@ -1,4 +1,4 @@
-package org.aerie.forest.core.factory.container;
+package org.aerie.forest.core.factory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ import org.aerie.forest.core.genericity.ContainsGenericity;
  * @date 2019年9月23日下午3:04:52
  * @version 1.0.1
  */
-class ForestRebarContainer<T extends ForestRebar> extends ContainsGenericity<T> {
+abstract class ForestRebarContainer<T extends ForestRebar> extends ContainsGenericity<T> {
 	/**
 	 * 容器
 	 */

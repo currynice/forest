@@ -1,6 +1,6 @@
 package org.aerie.forest.core.element.rebar;
 
-import org.aerie.forest.core.factory.container.ForestContainer;
+import org.aerie.forest.core.factory.ForestContainer;
 
 /**
  * 

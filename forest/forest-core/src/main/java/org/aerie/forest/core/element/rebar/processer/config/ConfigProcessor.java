@@ -5,12 +5,12 @@ import java.util.List;
 
 import org.aerie.forest.core.element.brick.exception.CustomException;
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
-import org.aerie.forest.core.element.rebar.ForestRebarCategory;
 import org.aerie.forest.core.element.rebar.bootable.timecrystal.TimeCrystal;
 import org.aerie.forest.core.element.rebar.processer.ForestProcessor;
 import org.aerie.forest.core.element.rebar.processer.config.container.ForestConfig;
 import org.aerie.forest.core.element.rebar.tool.file.FileTool;
-import org.aerie.forest.core.factory.container.ForestContainer;
+import org.aerie.forest.core.factory.ForestContainer;
+import org.aerie.forest.core.factory.ForestRebarInitShelf;
 
 /**
  * 
@@ -87,7 +87,7 @@ public final class ConfigProcessor extends ForestProcessor {
 		// 加载配置文件【流加载】
 		try {
 			ForestConfig forestConfig = (ForestConfig) ((FileTool) (ForestContainer.INSTANCE
-					.getForestRebar(ForestRebarCategory.FILE_TOOL)))
+					.getForestRebar(ForestRebarInitShelf.getInstance().FILE_TOOL)))
 							.analyzeYamlByClass(this.getClass().getClassLoader()
 									.getResourceAsStream(CONFIG_PATH + DEFAULT_CONFIG_PATH_YAML), ForestConfig.class);
 			List<String> fieldsNameIsNull = forestConfig.getFieldsNameIsNull();
