@@ -101,19 +101,17 @@ public final class TimeCrystal extends ForestBootable {
 
 	@Override
 	protected void beforeRun() {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	protected void afterRun() {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	protected boolean customAllowStart() {
-		// TODO Auto-generated method stub
+
 		return true;
 	}
 

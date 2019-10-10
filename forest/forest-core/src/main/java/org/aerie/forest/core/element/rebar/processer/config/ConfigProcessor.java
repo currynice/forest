@@ -59,7 +59,7 @@ public final class ConfigProcessor extends ForestProcessor {
 	 * @return
 	 * @throws Exception
 	 */
-	static ConfigProcessor getInstance() {
+	protected static ConfigProcessor getInstance() {
 		/**
 		 * 双重锁
 		 */

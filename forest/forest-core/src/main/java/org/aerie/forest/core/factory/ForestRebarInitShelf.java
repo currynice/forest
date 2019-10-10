@@ -66,17 +66,22 @@ public final class ForestRebarInitShelf extends ForestRebarShelf {
 	public final RebarScutcheon<TimeCrystal> TIME_CRYSTAL = new RebarScutcheon<TimeCrystal>("时间晶振",
 			ForestRebarContainerCategory.BOOTABLE) {
 	};
-//	/**
-//	 * UUID池类
-//	 */
-//	public final static RebarType<UuidPool> UUID_POOL = new RebarType<>(ForestRebarCategory.UUID_POOL);
-//	// ===>===>===>处理器
-//	/**
-//	 * 分层异常处理器
-//	 */
-//	public final static RebarType<ExceptionProcessor> EXCRPTION_PROCESSOR = new RebarType<>(
-//			ForestRebarCategory.EXCRPTION_PROCESSOR);
-//	// ===>===>===>工具
+	/**
+	 * UUID池类
+	 */
+	public final RebarScutcheon<UuidPool> UUID_POOL = new RebarScutcheon<UuidPool>("UUID池",
+			ForestRebarContainerCategory.BOOTABLE) {
+
+	};
+	// ===>===>===>处理器
+	/**
+	 * 分层异常处理器
+	 */
+	public final RebarScutcheon<ExceptionProcessor> EXCRPTION_PROCESSOR = new RebarScutcheon<ExceptionProcessor>(
+			"异常处理器", ForestRebarContainerCategory.PROCESSER) {
+
+	};
+	// ===>===>===>工具
 	/**
 	 * File工具
 	 */

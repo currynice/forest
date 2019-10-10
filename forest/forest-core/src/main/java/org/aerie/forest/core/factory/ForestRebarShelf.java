@@ -31,10 +31,6 @@ public abstract class ForestRebarShelf {
 		 */
 		private Class<T> forestRebarClass;
 		/**
-		 * 架构元素入库组件
-		 */
-		private ForestRebarStorage<?> forestRebarStorage;
-		/**
 		 * forest架构元素属于的容器
 		 */
 		private ForestRebarContainerCategory forestRebarContainerCategory;
@@ -51,10 +47,19 @@ public abstract class ForestRebarShelf {
 			return forestRebarClass;
 		}
 
+		@SuppressWarnings("unchecked")
 		public ForestRebarStorage<?> getForestRebarStorage() {
-			String StorageName = getForestRebarClass().getName() + "Storage";
-			// TODO
-			return forestRebarStorage;
+			String storageName = getForestRebarClass().getName() + "Storage";
+			try {
+				// 反射调用静态方法获取入库组件单例对象
+				return (ForestRebarStorage<T>) Class.forName(storageName).getDeclaredMethod("getInstance").invoke(null);
+			} catch (ClassNotFoundException e) {
+				throw new RuntimeException("无法找到：【" + storageName + "】入库组件", e);
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException("无法找到：【" + storageName + "】入库组件的获取单例对象的方法", e);
+			} catch (Exception e) {
+				throw new RuntimeException("入库组件： 【" + storageName + "】的获取单例对象的方法不合法");
+			}
 		}
 
 		public ForestRebarContainerCategory getForestRebarContainerCategory() {

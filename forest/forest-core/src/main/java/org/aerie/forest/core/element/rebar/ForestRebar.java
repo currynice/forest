@@ -56,19 +56,19 @@ public abstract class ForestRebar {
 					}
 					// 获得所有public的构造函数
 					if (forestRebarClass.getConstructors().length != 0) {
-						throw new Error("forest单例架构元素必须是单例，私有化所有的构造方法");
+						throw new RuntimeException("forest单例架构元素必须是单例，私有化所有的构造方法");
 					}
 					// 获得获得本身对象以及修饰符是(默认修饰符或者protected)+(static或者final+static)的方法
 					List<Method> resultMethods = Arrays.asList(forestRebarClass.getDeclaredMethods()).stream()
 							.filter(p1 -> p1.getGenericReturnType().getTypeName().equals(forestRebarClass.getName()))
 							.collect(Collectors.toList());
 					if (resultMethods != null && resultMethods.size() != 1) {
-						throw new Error("forest单例架构元素必须是单例，获取单例的静态方法有且只有一个");
+						throw new RuntimeException("forest单例架构元素必须是单例，获取单例的静态方法有且只有一个");
 					}
 					// 该获取单例的方法的修饰符编号
 					int modifierCode = resultMethods.get(0).getModifiers();
 					if (modifierCode != 8 && modifierCode != 12 && modifierCode != 24 && modifierCode != 28) {
-						throw new Error("forest单例架构元素必须是单例，获取单例的静态方法有且只有一个");
+						throw new RuntimeException("forest单例架构元素必须是单例，获取单例的静态方法有且只有一个");
 					}
 				}
 			});
@@ -86,7 +86,7 @@ public abstract class ForestRebar {
 	 */
 	protected ForestRebar() {
 		if (!ForestConfig.INSTANCE.isLogInitConfig()) {
-			throw new Error("forest未完成初始化");
+			throw new RuntimeException("forest未完成初始化");
 		}
 	}
 

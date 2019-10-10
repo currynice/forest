@@ -33,14 +33,14 @@ public enum GlobalLogger {
 
 	public Logger getLOGGER() {
 		if (!ForestConfig.INSTANCE.isLogInitConfig()) {
-			throw new Error("log未完成配置文件加载");
+			throw new RuntimeException("log未完成配置文件加载");
 		}
 		return LOGGER;
 	}
 
 	public Marker getMARKER_FATAL() {
 		if (!ForestConfig.INSTANCE.isLogInitConfig()) {
-			throw new Error("log未完成配置文件加载");
+			throw new RuntimeException("log未完成配置文件加载");
 		}
 		return MARKER_FATAL;
 	}

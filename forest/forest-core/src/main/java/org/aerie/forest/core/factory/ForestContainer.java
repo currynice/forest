@@ -113,19 +113,18 @@ public enum ForestContainer {
 				.filter(p1 -> p1.getClass() == rebarScutcheon.getForestRebarClass()).collect(Collectors.toList());
 		// 容器中必须是单例
 		if (collect == null || collect.size() > 1) {
-			throw new Error("forest容器崩溃");
+			throw new RuntimeException("forest容器崩溃");
 		}
 		// 如果容器里面不存在元素则通过入库组件加入
 		if (collect.size() == 0) {
 			if (!first) {
-				throw new Error("无法从容器中取出对应的架构元素");
+				throw new RuntimeException("无法从容器中取出对应的架构元素");
 			}
-			// 通过throw new Error("forest容器崩溃");
 			try {
 				// 执行入库指令
 				rebarScutcheon.getForestRebarStorage().putInStorage();
 			} catch (Exception e) {
-				throw new Error(rebarScutcheon.getScutcheonName() + "执行入库组件失败\ncaused by:" + e.getMessage());
+				throw new RuntimeException(rebarScutcheon.getScutcheonName() + "执行【入库组件】失败", e);
 			}
 			return getForestRebar(rebarScutcheon, false);
 		}

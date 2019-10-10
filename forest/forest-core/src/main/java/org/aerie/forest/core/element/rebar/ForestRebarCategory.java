@@ -58,7 +58,7 @@
 //		try {
 //			return (Class<? extends ForestRebar>) Class.forName(forestRebarClass);
 //		} catch (ClassNotFoundException e) {
-//			throw new Error("无法找到" + typeName + "的类");
+//			throw new RuntimeException("无法找到" + typeName + "的类");
 //		}
 //	}
 //
