@@ -1,7 +1,6 @@
 package org.aerie.forest.framework;
 
 import org.aerie.forest.bootable.uuidpool.UuidPool;
-import org.aerie.forest.brick.time.FrequentlyUsedTime;
 import org.aerie.forest.core.factory.ForestFactory;
 
 public class Test {

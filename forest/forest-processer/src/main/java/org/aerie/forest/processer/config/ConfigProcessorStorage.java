@@ -1,4 +1,4 @@
-package org.aerie.forest.core.element.rebar.processer.config;
+package org.aerie.forest.processer.config;
 
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
 import org.aerie.forest.core.element.rebar.processer.ForestProcessorStorage;
