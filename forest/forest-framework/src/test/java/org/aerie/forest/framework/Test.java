@@ -1,6 +1,5 @@
 package org.aerie.forest.framework;
 
-import org.aerie.forest.bootable.timecrystal.TimeCrystal;
 import org.aerie.forest.bootable.uuidpool.UuidPool;
 import org.aerie.forest.core.factory.ForestFactory;
 

@@ -1,4 +1,4 @@
-package org.aerie.forest.core.element.brick.time;
+package org.aerie.forest.brick.time;
 
 /**
  * 
