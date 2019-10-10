@@ -65,10 +65,4 @@ public final class ForestRebarInitShelf extends ForestShelf {
 
 	};
 	// ===>===>===>工具
-	/**
-	 * File工具
-	 */
-	public final RebarScutcheon<FileTool> FILE_TOOL = new RebarScutcheon<FileTool>("File工具",
-			ForestRebarContainerCategory.TOOL) {
-	};
 }

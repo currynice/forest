@@ -1,4 +1,4 @@
-package org.aerie.forest.core.element.rebar.tool.file;
+package org.aerie.forest.tool.file;
 
 import java.io.InputStream;
 import java.util.Hashtable;

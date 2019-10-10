@@ -5,6 +5,7 @@ import org.aerie.forest.bootable.uuidpool.UuidPool;
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
 import org.aerie.forest.core.factory.ForestRebarContainerCategory;
 import org.aerie.forest.core.factory.ForestShelf;
+import org.aerie.forest.tool.file.FileTool;
 
 /**
  * 
@@ -68,5 +69,12 @@ public final class ForestRebarShelf extends ForestShelf {
 	public final RebarScutcheon<UuidPool> UUID_POOL = new RebarScutcheon<UuidPool>("UUID池",
 			ForestRebarContainerCategory.BOOTABLE) {
 
+	};
+	// ===>===>===>工具
+	/**
+	 * File工具
+	 */
+	public final RebarScutcheon<FileTool> FILE_TOOL = new RebarScutcheon<FileTool>("File工具",
+			ForestRebarContainerCategory.TOOL) {
 	};
 }
