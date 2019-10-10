@@ -2,6 +2,7 @@ package org.aerie.forest.core.factory;
 
 import org.aerie.forest.core.element.rebar.ForestRebar;
 import org.aerie.forest.core.factory.ForestRebarShelf.RebarScutcheon;
+import org.aerie.forest.core.init.ForestConfig;
 
 /**
  * 
@@ -17,7 +18,9 @@ public enum ForestFactory {
 	INSTANCE;
 
 	private ForestFactory() {
-		
+		if (!ForestConfig.INSTANCE.isLogInitConfig()) {
+			throw new RuntimeException("log未完成初始化，forest架构元素工厂初始化失败");
+		}
 	}
 
 	/**

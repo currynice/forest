@@ -11,7 +11,8 @@
 	<description>森林</description>
 	<modules>
 		<module>forest-core</module>
-		<module>forest-framework</module>
+	<module>forest-factory</module>
+	<module>forest-framework</module>
 	</modules>
 	<properties>
 		<!-- 项目构建源编码格式为UTF-8 -->

@@ -1,6 +1,6 @@
 /**
  * 
- * @description forest的工厂
+ * @description 森林的工厂模块
  * @author falconTrotk
  * @company aerie
  * @date 2019年9月12日上午10:40:54

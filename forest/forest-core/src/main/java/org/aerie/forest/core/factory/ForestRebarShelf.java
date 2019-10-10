@@ -35,8 +35,7 @@ public abstract class ForestRebarShelf {
 		 */
 		private ForestRebarContainerCategory forestRebarContainerCategory;
 
-		public RebarScutcheon(String scutcheonName,
-				org.aerie.forest.core.factory.ForestRebarContainerCategory forestRebarContainerCategory) {
+		public RebarScutcheon(String scutcheonName, ForestRebarContainerCategory forestRebarContainerCategory) {
 			super();
 			this.scutcheonName = scutcheonName;
 			this.forestRebarContainerCategory = forestRebarContainerCategory;

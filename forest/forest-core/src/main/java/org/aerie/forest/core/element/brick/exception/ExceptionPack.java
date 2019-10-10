@@ -2,6 +2,8 @@ package org.aerie.forest.core.element.brick.exception;
 
 import java.util.Optional;
 
+import org.aerie.forest.core.init.ForestConfig;
+
 /**
  * 
  * @description 异常包装【将异常包装起来，用包装异常处理器处理】******会忽略抑制异常<以及>包装可抛物中的异常包装所包装的可抛物
@@ -22,7 +24,7 @@ public class ExceptionPack extends Exception {
 	/**
 	 * 异常的等级
 	 */
-	private ExceptionGradeEnum exceptionGradeEnum = ExceptionGradeEnum.WARN;
+	private ExceptionGradeEnum exceptionGradeEnum = ForestConfig.INSTANCE.getDefaultExceptionLevel();
 	/**
 	 * 是否弹窗
 	 */

@@ -15,10 +15,11 @@ import org.aerie.forest.core.element.rebar.bootable.ForestBootable;
  * @date 2019年2月7日上午9:54:16
  */
 public final class TimeCrystal extends ForestBootable {
+
 	/**
 	 * 时间 刷新频率【1秒刷新下一次】
 	 */
-	private final static int timeFrequency = 1000;
+	private final static long timeFrequency = 1000;
 	/**
 	 * 当前系统时间
 	 */

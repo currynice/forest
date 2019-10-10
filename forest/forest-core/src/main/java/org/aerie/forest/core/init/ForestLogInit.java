@@ -30,7 +30,7 @@ import ch.qos.logback.core.util.StatusPrinter;
  * @date 2019年8月27日上午11:28:54
  * @version 1.0.1
  */
-public enum ForestInit {
+public enum ForestLogInit {
 	INSTANCE;
 	/**
 	 * 
@@ -65,14 +65,14 @@ public enum ForestInit {
 	 */
 	private final static String STATIC_LOGGER_BINDER_PATH = "org/slf4j/impl/StaticLoggerBinder.class";
 
-	private ForestInit() {
+	private ForestLogInit() {
 		// Do Nothing
 	}
 
 	/**
 	 * 加载log配置环境
 	 */
-	public synchronized void loadLogConfig() {
+	protected synchronized void loadLogConfig() {
 		if (ForestConfig.INSTANCE.isLogInitConfig()) {
 			System.err.println("log配置环境已经加载，无法重复加载");
 			return;
@@ -87,8 +87,6 @@ public enum ForestInit {
 				// 加载log4j2配置文件
 				processLogbackConfigFile();
 			}
-			// 更改初始化标识符
-			ForestConfig.INSTANCE.setLogInitConfig(true);
 			System.err.println("<==\t刷新log配置环境成功");
 		} catch (Exception e) {
 			System.err.println("加载log配置文件失败:\nCaused By:");
@@ -159,7 +157,7 @@ public enum ForestInit {
 			GlobalLogger globalLogger = GlobalLogger.INSTANCE;
 			System.err.println("==> ↑↑↑无视上方无法找到Log4j2配置文件的错误");
 			// 获取log4j2配置文件流
-			InputStream inputStream = ForestInit.class.getResourceAsStream(PACK_PATH + LOG4J2_FILE_NAME);
+			InputStream inputStream = ForestLogInit.class.getResourceAsStream(PACK_PATH + LOG4J2_FILE_NAME);
 			// 获得配置源
 			ConfigurationSource configurationSource = new ConfigurationSource(inputStream);
 			// 初始化获得log的上下文
@@ -197,7 +195,7 @@ public enum ForestInit {
 				logConfigFile.createNewFile();
 				// 写入jar包中的配置文件
 				try (FileOutputStream fileOutputStream = new FileOutputStream(logConfigFile);
-						InputStream resourceAsStream = ForestInit.class.getClassLoader()
+						InputStream resourceAsStream = ForestLogInit.class.getClassLoader()
 								.getResourceAsStream(PACK_PATH + LOG4J2_FILE_NAME);) {
 					byte buffer[] = new byte[1024];
 					int num;

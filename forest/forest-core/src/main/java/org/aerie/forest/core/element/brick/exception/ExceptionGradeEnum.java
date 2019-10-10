@@ -1,7 +1,5 @@
 package org.aerie.forest.core.element.brick.exception;
 
-import org.aerie.forest.core.element.brick.log.GlobalLogger;
-
 /**
  * 
  * @description 异常的等级【枚举】
@@ -39,7 +37,6 @@ public enum ExceptionGradeEnum {
 	private ExceptionGradeEnum(String message, int level) {
 		this.MESSAGE = message;
 		this.LEVEL = level;
-		GlobalLogger.INSTANCE.getLOGGER().trace("【单例】异常等级【" + this.name() + ":" + this.MESSAGE + "】初始化");
 	}
 
 	public String getMESSAGE() {

@@ -1,16 +1,18 @@
-package org.aerie.forest.core;
+package org.aerie.forest.framework;
 
 import org.aerie.forest.core.element.rebar.bootable.timecrystal.TimeCrystal;
-import org.aerie.forest.core.element.rebar.bootable.uuidpool.UuidPool;
 import org.aerie.forest.core.factory.ForestFactory;
 import org.aerie.forest.core.factory.ForestRebarInitShelf;
-import org.aerie.forest.core.init.ForestInit;
 
-public class Test {
+/**
+ * Unit test for simple App.
+ */
+public class AppTest {
 	public static void main(String[] args) {
-		ForestInit.INSTANCE.loadLogConfig();
-		UuidPool forestRebarFactory = ForestFactory.INSTANCE
-				.getForestRebarFactory(ForestRebarInitShelf.getInstance().UUID_POOL);
+
+		ForestFactory forestFactory = ForestFactory.INSTANCE;
+		TimeCrystal forestRebarFactory = forestFactory
+				.getForestRebarFactory(ForestRebarInitShelf.getInstance().TIME_CRYSTAL);
 		try {
 			forestRebarFactory.run();
 		} catch (Exception e) {
