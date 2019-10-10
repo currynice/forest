@@ -81,9 +81,9 @@ public abstract class ForestShelf {
 	 * @description forest架构元素货架合法性判断
 	 * @author falconTrotk
 	 * @company aerie
-	 * @date 2019年10月9日下午5:05:05
+	 * @date 2019年10月10日下午5:56:38
 	 * @version 1.0.1
-	 * @throws Exception
+	 * @return
 	 */
 	public final boolean isLegal() {
 		return false;

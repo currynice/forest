@@ -20,7 +20,7 @@ public class CustomException extends Exception {
 	/**
 	 * 
 	 * @description 自定义异常【禁止无参构造和异常信息禁止为空】
-	 * @param message
+	 * @param message 异常信息
 	 */
 	public CustomException(String message) {
 		super(Optional.ofNullable(message).filter(p1 -> !p1.isEmpty()).orElse("丢失异常信息"));

@@ -14,7 +14,7 @@ import org.aerie.forest.core.factory.ForestShelf.RebarScutcheon;
  * @description forest容器
  * @author falconTrotk
  * @company aerie
- * @date 2019年9月23日下午2:40:38
+ * @date 2019年10月10日下午5:42:52
  * @version 1.0.1
  */
 public enum ForestContainer {
@@ -38,8 +38,9 @@ public enum ForestContainer {
 	 * @description 添加forest架构元素
 	 * @author falconTrotk
 	 * @company aerie
-	 * @date 2019年9月23日下午2:53:01
+	 * @date 2019年10月10日下午5:41:36
 	 * @version 1.0.1
+	 * @param forestRebar
 	 * @throws Exception
 	 */
 	public void addForestRebar(ForestRebar forestRebar) throws Exception {
@@ -65,12 +66,11 @@ public enum ForestContainer {
 	 * @description 将对象强转称集合的类型并添加进去【内部调用方法，插入之前已经校验了类型可以强转】
 	 * @author falconTrotk
 	 * @company aerie
-	 * @date 2019年9月24日下午3:19:39
+	 * @date 2019年10月10日下午5:42:00
 	 * @version 1.0.1
 	 * @param <T>
 	 * @param list
 	 * @param forestRebar
-	 * @throws Exception
 	 */
 	@SuppressWarnings("unchecked")
 	private <T> void addForestRebarToList(List<T> list, ForestRebar forestRebar) {
@@ -82,9 +82,9 @@ public enum ForestContainer {
 	 * @description 从容器中取出对应的架构元素
 	 * @author falconTrotk
 	 * @company aerie
-	 * @date 2019年9月24日下午6:01:17
+	 * @date 2019年10月10日下午5:42:14
 	 * @version 1.0.1
-	 * @param forestRebarContainerCategory
+	 * @param rebarScutcheon
 	 * @return
 	 */
 	public ForestRebar getForestRebar(RebarScutcheon<?> rebarScutcheon) {
@@ -96,9 +96,10 @@ public enum ForestContainer {
 	 * @description 从容器中取出对应的架构元素
 	 * @author falconTrotk
 	 * @company aerie
-	 * @date 2019年9月24日下午6:01:17
+	 * @date 2019年10月10日下午5:42:30
 	 * @version 1.0.1
-	 * @param forestRebarContainerCategory
+	 * @param rebarScutcheon
+	 * @param first
 	 * @return
 	 */
 	private ForestRebar getForestRebar(RebarScutcheon<?> rebarScutcheon, boolean first) {

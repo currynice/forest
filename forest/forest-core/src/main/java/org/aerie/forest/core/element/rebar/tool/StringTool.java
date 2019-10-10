@@ -16,6 +16,10 @@ public enum StringTool {
 	/**
 	 * 
 	 * @description 获取字符在字符串中的位置
+	 * @author falconTrotk
+	 * @company aerie
+	 * @date 2019年10月10日下午5:39:42
+	 * @version 1.0.1
 	 * @param string
 	 * @param appoint
 	 * @param index
