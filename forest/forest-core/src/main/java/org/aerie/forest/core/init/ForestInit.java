@@ -110,7 +110,7 @@ public enum ForestInit {
 	 */
 	@SuppressWarnings("unused")
 	private boolean isLoggerContextLoaded() {
-		// 没有想到好办法
+		// 没有想到好办法,现在思路通过其他方法解决
 		// TODO
 		return true;
 	}

@@ -15,6 +15,11 @@ import org.aerie.forest.core.factory.ForestRebarShelf.RebarScutcheon;
  */
 public enum ForestFactory {
 	INSTANCE;
+
+	private ForestFactory() {
+		
+	}
+
 	/**
 	 * 
 	 * @description 获得架构元素【参数从ForestRebarFactoryType（枚举类）中获取】
