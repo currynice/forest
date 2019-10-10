@@ -6,7 +6,6 @@ import java.util.Map;
 
 import org.aerie.forest.core.element.brick.exception.CustomException;
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
-import org.aerie.forest.core.element.rebar.bootable.timecrystal.TimeCrystal;
 import org.aerie.forest.core.element.rebar.tool.ForestTool;
 import org.yaml.snakeyaml.Yaml;
 
@@ -46,7 +45,7 @@ public final class FileTool extends ForestTool {
 		 * 双重锁
 		 */
 		if (fileTool == null) {
-			synchronized (TimeCrystal.class) {
+			synchronized (FileTool.class) {
 				if (fileTool == null) {
 					fileTool = new FileTool();
 				}

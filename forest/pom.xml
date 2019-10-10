@@ -13,6 +13,7 @@
 		<module>forest-core</module>
 	<module>forest-factory</module>
 	<module>forest-framework</module>
+	<module>forest-bootable</module>
 	</modules>
 	<properties>
 		<!-- 项目构建源编码格式为UTF-8 -->

@@ -6,13 +6,13 @@ import org.aerie.forest.core.genericity.ContainsGenericity;
 
 /**
  * 
- * @description forest架构元素货架
+ * @description forest货架
  * @author falconTrotk
  * @company aerie
  * @date 2019年10月9日上午11:21:07
  * @version 1.0.1
  */
-public abstract class ForestRebarShelf {
+public abstract class ForestShelf {
 	/**
 	 * 
 	 * @description 类别【没有校验该泛型是不是存在于ForestRebarContainerCategory对应的容器里面】T的限定也没有处理

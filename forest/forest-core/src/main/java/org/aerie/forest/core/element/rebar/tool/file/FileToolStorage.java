@@ -2,7 +2,6 @@ package org.aerie.forest.core.element.rebar.tool.file;
 
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
 import org.aerie.forest.core.element.rebar.ForestRebarStorage;
-import org.aerie.forest.core.element.rebar.bootable.timecrystal.TimeCrystalStorage;
 
 /**
  * 
@@ -40,7 +39,7 @@ public class FileToolStorage extends ForestRebarStorage<FileTool> {
 		 * 双重锁
 		 */
 		if (fileToolStorage == null) {
-			synchronized (TimeCrystalStorage.class) {
+			synchronized (FileToolStorage.class) {
 				if (fileToolStorage == null) {
 					fileToolStorage = new FileToolStorage();
 				}

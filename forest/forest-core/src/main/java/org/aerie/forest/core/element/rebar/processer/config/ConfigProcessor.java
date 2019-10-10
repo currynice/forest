@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.aerie.forest.core.element.brick.exception.CustomException;
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
-import org.aerie.forest.core.element.rebar.bootable.timecrystal.TimeCrystal;
 import org.aerie.forest.core.element.rebar.processer.ForestProcessor;
 import org.aerie.forest.core.element.rebar.processer.config.container.ForestConfig;
 import org.aerie.forest.core.element.rebar.tool.file.FileTool;
@@ -64,7 +63,7 @@ public final class ConfigProcessor extends ForestProcessor {
 		 * 双重锁
 		 */
 		if (configProcessor == null) {
-			synchronized (TimeCrystal.class) {
+			synchronized (ConfigProcessor.class) {
 				if (configProcessor == null) {
 					configProcessor = new ConfigProcessor();
 				}

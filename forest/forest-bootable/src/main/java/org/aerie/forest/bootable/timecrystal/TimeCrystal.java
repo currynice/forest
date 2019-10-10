@@ -1,4 +1,4 @@
-package org.aerie.forest.core.element.rebar.bootable.timecrystal;
+package org.aerie.forest.bootable.timecrystal;
 
 import java.time.LocalDateTime;
 

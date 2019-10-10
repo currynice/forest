@@ -1,7 +1,6 @@
 package org.aerie.forest.core.factory;
 
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
-import org.aerie.forest.core.element.rebar.bootable.timecrystal.TimeCrystal;
 import org.aerie.forest.core.element.rebar.bootable.uuidpool.UuidPool;
 import org.aerie.forest.core.element.rebar.processer.exception.ExceptionProcessor;
 import org.aerie.forest.core.element.rebar.tool.file.FileTool;
@@ -14,7 +13,7 @@ import org.aerie.forest.core.element.rebar.tool.file.FileTool;
  * @date 2019年10月9日上午11:38:55
  * @version 1.0.1
  */
-public final class ForestRebarInitShelf extends ForestRebarShelf {
+public final class ForestRebarInitShelf extends ForestShelf {
 	/**
 	 * 单例
 	 */
@@ -46,7 +45,7 @@ public final class ForestRebarInitShelf extends ForestRebarShelf {
 		 * 双重锁
 		 */
 		if (forestRebarInitShelf == null) {
-			synchronized (TimeCrystal.class) {
+			synchronized (ForestRebarInitShelf.class) {
 				if (forestRebarInitShelf == null) {
 					forestRebarInitShelf = new ForestRebarInitShelf();
 				}
@@ -55,17 +54,7 @@ public final class ForestRebarInitShelf extends ForestRebarShelf {
 		return forestRebarInitShelf;
 	}
 
-	/*
-	 * 下面的枚举需要人为校验泛型和参数的类型是不是一致
-	 */
-	/////////////////////////////////////////////////// =========>>>>
 	// ===>===>===>启动器
-	/**
-	 * 时间晶振类
-	 */
-	public final RebarScutcheon<TimeCrystal> TIME_CRYSTAL = new RebarScutcheon<TimeCrystal>("时间晶振",
-			ForestRebarContainerCategory.BOOTABLE) {
-	};
 	/**
 	 * UUID池类
 	 */

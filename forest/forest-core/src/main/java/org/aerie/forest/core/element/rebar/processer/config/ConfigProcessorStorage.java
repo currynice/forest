@@ -1,7 +1,6 @@
 package org.aerie.forest.core.element.rebar.processer.config;
 
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
-import org.aerie.forest.core.element.rebar.bootable.timecrystal.TimeCrystalStorage;
 import org.aerie.forest.core.element.rebar.processer.ForestProcessorStorage;
 
 /**
@@ -41,7 +40,7 @@ public final class ConfigProcessorStorage extends ForestProcessorStorage<ConfigP
 		 * 双重锁
 		 */
 		if (configProcessorStorage == null) {
-			synchronized (TimeCrystalStorage.class) {
+			synchronized (ConfigProcessorStorage.class) {
 				if (configProcessorStorage == null) {
 					configProcessorStorage = new ConfigProcessorStorage();
 				}

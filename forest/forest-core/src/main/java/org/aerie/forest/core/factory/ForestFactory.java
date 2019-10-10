@@ -1,7 +1,7 @@
 package org.aerie.forest.core.factory;
 
 import org.aerie.forest.core.element.rebar.ForestRebar;
-import org.aerie.forest.core.factory.ForestRebarShelf.RebarScutcheon;
+import org.aerie.forest.core.factory.ForestShelf.RebarScutcheon;
 import org.aerie.forest.core.init.ForestConfig;
 
 /**

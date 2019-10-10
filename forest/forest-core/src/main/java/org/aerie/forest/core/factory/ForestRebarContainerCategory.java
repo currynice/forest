@@ -13,7 +13,7 @@ import org.aerie.forest.core.element.rebar.tool.ForestTool;
  * @date 2019年9月23日下午3:23:26
  * @version 1.0.1
  */
-enum ForestRebarContainerCategory {
+public enum ForestRebarContainerCategory {
 	// 启动器
 	BOOTABLE(new ForestRebarContainer<ForestBootable>() {
 	}),

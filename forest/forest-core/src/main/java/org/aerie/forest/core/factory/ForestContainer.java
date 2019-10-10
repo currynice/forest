@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
 import org.aerie.forest.core.element.rebar.ForestRebar;
-import org.aerie.forest.core.factory.ForestRebarShelf.RebarScutcheon;
+import org.aerie.forest.core.factory.ForestShelf.RebarScutcheon;
 
 /**
  * 

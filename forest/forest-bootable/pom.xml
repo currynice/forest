@@ -9,8 +9,9 @@
 		<artifactId>forest</artifactId>
 		<version>1.0.1</version>
 	</parent>
-	<artifactId>forest-framework</artifactId>
-	<name>forest-framework</name>
+
+	<artifactId>forest-bootable</artifactId>
+	<name>forest-bootable</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -25,11 +26,6 @@
 		<dependency>
 			<groupId>org.aerie.forest</groupId>
 			<artifactId>forest-core</artifactId>
-			<version>1.0.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.aerie.forest</groupId>
-			<artifactId>forest-bootable</artifactId>
 			<version>1.0.1</version>
 		</dependency>
 	</dependencies>
