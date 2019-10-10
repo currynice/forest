@@ -1,4 +1,4 @@
-package org.aerie.forest.core.element.rebar.bootable.uuidpool;
+package org.aerie.forest.bootable.uuidpool;
 
 import java.util.ArrayList;
 import java.util.List;

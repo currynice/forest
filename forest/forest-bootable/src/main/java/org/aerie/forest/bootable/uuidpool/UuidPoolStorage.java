@@ -1,4 +1,4 @@
-package org.aerie.forest.core.element.rebar.bootable.uuidpool;
+package org.aerie.forest.bootable.uuidpool;
 
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
 import org.aerie.forest.core.element.rebar.bootable.ForestBootableStorage;

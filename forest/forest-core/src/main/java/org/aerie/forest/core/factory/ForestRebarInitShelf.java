@@ -1,7 +1,6 @@
 package org.aerie.forest.core.factory;
 
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
-import org.aerie.forest.core.element.rebar.bootable.uuidpool.UuidPool;
 import org.aerie.forest.core.element.rebar.processer.exception.ExceptionProcessor;
 import org.aerie.forest.core.element.rebar.tool.file.FileTool;
 
@@ -55,13 +54,8 @@ public final class ForestRebarInitShelf extends ForestShelf {
 	}
 
 	// ===>===>===>启动器
-	/**
-	 * UUID池类
-	 */
-	public final RebarScutcheon<UuidPool> UUID_POOL = new RebarScutcheon<UuidPool>("UUID池",
-			ForestRebarContainerCategory.BOOTABLE) {
-
-	};
+	
+	
 	// ===>===>===>处理器
 	/**
 	 * 分层异常处理器

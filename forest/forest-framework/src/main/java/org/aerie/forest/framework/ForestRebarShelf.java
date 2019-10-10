@@ -1,6 +1,7 @@
 package org.aerie.forest.framework;
 
 import org.aerie.forest.bootable.timecrystal.TimeCrystal;
+import org.aerie.forest.bootable.uuidpool.UuidPool;
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
 import org.aerie.forest.core.factory.ForestRebarContainerCategory;
 import org.aerie.forest.core.factory.ForestShelf;
@@ -60,5 +61,12 @@ public final class ForestRebarShelf extends ForestShelf {
 	 */
 	public final RebarScutcheon<TimeCrystal> TIME_CRYSTAL = new RebarScutcheon<TimeCrystal>("时间晶振",
 			ForestRebarContainerCategory.BOOTABLE) {
+	};
+	/**
+	 * UUID池类
+	 */
+	public final RebarScutcheon<UuidPool> UUID_POOL = new RebarScutcheon<UuidPool>("UUID池",
+			ForestRebarContainerCategory.BOOTABLE) {
+
 	};
 }
