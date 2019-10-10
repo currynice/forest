@@ -9,9 +9,8 @@
 		<artifactId>forest</artifactId>
 		<version>1.0.1</version>
 	</parent>
-
-	<artifactId>forest-bootable</artifactId>
-	<name>forest-bootable</name>
+	<artifactId>forest-processer</artifactId>
+	<name>forest-processer</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
