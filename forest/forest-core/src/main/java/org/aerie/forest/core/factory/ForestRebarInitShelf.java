@@ -2,7 +2,6 @@ package org.aerie.forest.core.factory;
 
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
 import org.aerie.forest.core.element.rebar.processer.exception.ExceptionProcessor;
-import org.aerie.forest.core.element.rebar.tool.file.FileTool;
 
 /**
  * 
@@ -53,10 +52,6 @@ public final class ForestRebarInitShelf extends ForestShelf {
 		return forestRebarInitShelf;
 	}
 
-	// ===>===>===>启动器
-	
-	
-	// ===>===>===>处理器
 	/**
 	 * 分层异常处理器
 	 */
@@ -64,5 +59,4 @@ public final class ForestRebarInitShelf extends ForestShelf {
 			"异常处理器", ForestRebarContainerCategory.PROCESSER) {
 
 	};
-	// ===>===>===>工具
 }
