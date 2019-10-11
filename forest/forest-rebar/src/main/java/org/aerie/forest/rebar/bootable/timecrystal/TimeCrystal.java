@@ -4,8 +4,8 @@ import java.time.LocalDateTime;
 
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
 import org.aerie.forest.core.element.rebar.ForestRebar;
-import org.aerie.forest.core.element.rebar.ForestRebarLedalCheck;
-import org.aerie.forest.core.element.rebar.bootable.ForestBootable;
+import org.aerie.forest.core.element.rebar.entity.bootable.ForestBootable;
+import org.aerie.forest.core.element.rebar.verify.ForestRebarLedalCheck;
 
 /**
  * 

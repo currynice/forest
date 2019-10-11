@@ -1,4 +1,6 @@
-package org.aerie.forest.core.element.rebar;
+package org.aerie.forest.core.element.rebar.verify;
+
+import org.aerie.forest.core.element.rebar.ForestRebar;
 
 /**
  * 

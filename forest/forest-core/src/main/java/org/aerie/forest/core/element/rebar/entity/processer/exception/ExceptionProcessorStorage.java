@@ -1,9 +1,9 @@
-package org.aerie.forest.core.element.rebar.processer.exception;
+package org.aerie.forest.core.element.rebar.entity.processer.exception;
 
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
-import org.aerie.forest.core.element.rebar.processer.ForestProcessorStorage;
+import org.aerie.forest.core.element.rebar.ForestRebarStorage;
 
-public final class ExceptionProcessorStorage extends ForestProcessorStorage<ExceptionProcessor> {
+public final class ExceptionProcessorStorage extends ForestRebarStorage<ExceptionProcessor> {
 
 	/**
 	 * 单例

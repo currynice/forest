@@ -1,4 +1,4 @@
-package org.aerie.forest.core.element.rebar.processer.exception;
+package org.aerie.forest.core.element.rebar.entity.processer.exception;
 
 import org.aerie.forest.core.function.SingleFunction;
 

@@ -1,7 +1,7 @@
 package org.aerie.forest.rebar.tool.zclass;
 
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
-import org.aerie.forest.core.element.rebar.tool.ForestTool;
+import org.aerie.forest.core.element.rebar.entity.tool.ForestTool;
 
 public final class ClassTool extends ForestTool {
 	/**

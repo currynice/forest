@@ -1,4 +1,4 @@
-package org.aerie.forest.core.element.rebar.bootable;
+package org.aerie.forest.core.element.rebar.entity.bootable;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -10,7 +10,7 @@ import org.aerie.forest.core.element.brick.exception.ExceptionGradeEnum;
 import org.aerie.forest.core.element.brick.exception.ExceptionPack;
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
 import org.aerie.forest.core.element.rebar.ForestRebar;
-import org.aerie.forest.core.element.rebar.ForestRebarLedalCheck;
+import org.aerie.forest.core.element.rebar.verify.ForestRebarLedalCheck;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

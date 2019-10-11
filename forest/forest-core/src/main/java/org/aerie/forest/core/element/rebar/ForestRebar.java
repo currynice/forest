@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
+import org.aerie.forest.core.element.rebar.verify.ForestRebarLedalCheck;
 import org.aerie.forest.core.init.ForestConfig;
 
 /**

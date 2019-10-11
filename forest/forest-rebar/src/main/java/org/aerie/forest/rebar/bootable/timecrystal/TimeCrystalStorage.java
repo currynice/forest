@@ -1,7 +1,7 @@
 package org.aerie.forest.rebar.bootable.timecrystal;
 
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
-import org.aerie.forest.core.element.rebar.bootable.ForestBootableStorage;
+import org.aerie.forest.core.element.rebar.ForestRebarStorage;
 
 /**
  * 
@@ -12,7 +12,7 @@ import org.aerie.forest.core.element.rebar.bootable.ForestBootableStorage;
  * @date 2019年9月15日下午4:12:47s
  *
  */
-public final class TimeCrystalStorage extends ForestBootableStorage<TimeCrystal> {
+public final class TimeCrystalStorage extends ForestRebarStorage<TimeCrystal> {
 
 	/**
 	 * 单例

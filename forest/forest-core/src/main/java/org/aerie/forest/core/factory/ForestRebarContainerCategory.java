@@ -1,9 +1,9 @@
 package org.aerie.forest.core.factory;
 
 import org.aerie.forest.core.element.rebar.ForestRebar;
-import org.aerie.forest.core.element.rebar.bootable.ForestBootable;
-import org.aerie.forest.core.element.rebar.processer.ForestProcessor;
-import org.aerie.forest.core.element.rebar.tool.ForestTool;
+import org.aerie.forest.core.element.rebar.entity.bootable.ForestBootable;
+import org.aerie.forest.core.element.rebar.entity.processer.ForestProcessor;
+import org.aerie.forest.core.element.rebar.entity.tool.ForestTool;
 
 /**
  * 

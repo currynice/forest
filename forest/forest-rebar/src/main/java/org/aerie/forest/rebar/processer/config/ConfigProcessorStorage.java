@@ -1,7 +1,7 @@
 package org.aerie.forest.rebar.processer.config;
 
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
-import org.aerie.forest.core.element.rebar.processer.ForestProcessorStorage;
+import org.aerie.forest.core.element.rebar.ForestRebarStorage;
 
 /**
  * 
@@ -12,7 +12,7 @@ import org.aerie.forest.core.element.rebar.processer.ForestProcessorStorage;
  * @date 2019年9月15日下午7:02:31
  *
  */
-public final class ConfigProcessorStorage extends ForestProcessorStorage<ConfigProcessor> {
+public final class ConfigProcessorStorage extends ForestRebarStorage<ConfigProcessor> {
 
 	/**
 	 * 单例

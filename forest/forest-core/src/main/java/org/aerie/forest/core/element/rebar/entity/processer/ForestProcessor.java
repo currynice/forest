@@ -1,4 +1,4 @@
-package org.aerie.forest.core.element.rebar.processer;
+package org.aerie.forest.core.element.rebar.entity.processer;
 
 import org.aerie.forest.core.element.rebar.ForestRebar;
 

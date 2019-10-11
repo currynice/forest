@@ -1,4 +1,4 @@
-package org.aerie.forest.core.element.rebar.bootable;
+package org.aerie.forest.core.element.rebar.entity.bootable;
 //package org.aerie.forest.core.element.rebar.bootable;
 //
 //import java.util.ArrayList;

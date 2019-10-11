@@ -6,7 +6,7 @@ import java.util.Random;
 import java.util.UUID;
 
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
-import org.aerie.forest.core.element.rebar.bootable.ForestBootable;
+import org.aerie.forest.core.element.rebar.entity.bootable.ForestBootable;
 
 /**
  * 
