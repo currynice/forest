@@ -12,7 +12,7 @@ import org.aerie.forest.core.element.rebar.ForestRebarStorage;
  * @date 2019年9月15日下午7:02:31
  *
  */
-public final class ConfigProcessorStorage extends ForestRebarStorage<ConfigProcessor> {
+public final class ConfigProcessorStorage extends ForestRebarStorage {
 
 	/**
 	 * 单例

@@ -46,12 +46,11 @@ public abstract class ForestShelf {
 			return forestRebarClass;
 		}
 
-		@SuppressWarnings("unchecked")
-		public ForestRebarStorage<?> getForestRebarStorage() {
+		public ForestRebarStorage getForestRebarStorage() {
 			String storageName = getForestRebarClass().getName() + "Storage";
 			try {
 				// 反射调用静态方法获取入库组件单例对象
-				return (ForestRebarStorage<T>) Class.forName(storageName).getDeclaredMethod("getInstance").invoke(null);
+				return (ForestRebarStorage) Class.forName(storageName).getDeclaredMethod("getInstance").invoke(null);
 			} catch (ClassNotFoundException e) {
 				throw new RuntimeException("无法找到：【" + storageName + "】入库组件", e);
 			} catch (NoSuchMethodException e) {

@@ -11,7 +11,6 @@
 	<description>森林</description>
 	<modules>
 		<module>forest-core</module>
-		<module>forest-factory</module>
 		<module>forest-framework</module>
 		<module>forest-brick</module>
 		<module>forest-rebar</module>

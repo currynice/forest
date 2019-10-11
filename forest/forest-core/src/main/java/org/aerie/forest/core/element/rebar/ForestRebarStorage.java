@@ -11,7 +11,7 @@ import org.aerie.forest.core.factory.ForestContainer;
  * @date 2019年9月15日下午3:51:54
  *
  */
-public abstract class ForestRebarStorage<T extends ForestRebar> {
+public abstract class ForestRebarStorage {
 
 	/**
 	 * 单例标识符
@@ -28,10 +28,10 @@ public abstract class ForestRebarStorage<T extends ForestRebar> {
 	 * @throws Exception
 	 */
 	public void putInStorage() throws Exception {
-		T t = getForestRebar();
-		t.addLedalCheck();
-		t.isLegal(t);
-		ForestContainer.INSTANCE.addForestRebar(t);
+		ForestRebar forestRebar = getForestRebar();
+		forestRebar.addLedalCheck();
+		forestRebar.isLegal(forestRebar);
+		ForestContainer.INSTANCE.addForestRebar(forestRebar);
 	}
 
 	/**
@@ -43,5 +43,5 @@ public abstract class ForestRebarStorage<T extends ForestRebar> {
 	 * @version 1.0.1
 	 * @return
 	 */
-	protected abstract T getForestRebar();
+	protected abstract ForestRebar getForestRebar();
 }

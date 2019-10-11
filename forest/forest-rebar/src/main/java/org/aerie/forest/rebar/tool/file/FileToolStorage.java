@@ -11,7 +11,7 @@ import org.aerie.forest.core.element.rebar.ForestRebarStorage;
  * @date 2019年9月27日下午2:30:27
  * @version 1.0.1
  */
-public class FileToolStorage extends ForestRebarStorage<FileTool> {
+public class FileToolStorage extends ForestRebarStorage {
 
 	/**
 	 * 单例

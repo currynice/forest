@@ -12,7 +12,7 @@ import org.aerie.forest.core.element.rebar.ForestRebarStorage;
  * @date 2019年9月15日下午6:39:15
  *
  */
-public final class UuidPoolStorage extends ForestRebarStorage<UuidPool> {
+public final class UuidPoolStorage extends ForestRebarStorage {
 
 	/**
 	 * 单例

@@ -3,7 +3,7 @@ package org.aerie.forest.core.element.rebar.entity.processer.exception;
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
 import org.aerie.forest.core.element.rebar.ForestRebarStorage;
 
-public final class ExceptionProcessorStorage extends ForestRebarStorage<ExceptionProcessor> {
+public final class ExceptionProcessorStorage extends ForestRebarStorage {
 
 	/**
 	 * 单例

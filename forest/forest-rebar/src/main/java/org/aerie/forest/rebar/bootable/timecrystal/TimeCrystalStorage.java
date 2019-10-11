@@ -1,6 +1,5 @@
 package org.aerie.forest.rebar.bootable.timecrystal;
 
-import org.aerie.forest.core.element.brick.log.GlobalLogger;
 import org.aerie.forest.core.element.rebar.ForestRebarStorage;
 
 /**
@@ -12,7 +11,7 @@ import org.aerie.forest.core.element.rebar.ForestRebarStorage;
  * @date 2019年9月15日下午4:12:47s
  *
  */
-public final class TimeCrystalStorage extends ForestRebarStorage<TimeCrystal> {
+public final class TimeCrystalStorage extends ForestRebarStorage {
 
 	/**
 	 * 单例
@@ -21,11 +20,10 @@ public final class TimeCrystalStorage extends ForestRebarStorage<TimeCrystal> {
 
 	private TimeCrystalStorage() {
 		synchronized (TimeCrystalStorage.class) {
-			if (singletonFlag == true) {
+			if (singletonFlag == true)
 				throw new RuntimeException("受到反射攻击");
-			}
 			singletonFlag = true;
-			GlobalLogger.INSTANCE.getLOGGER().info("【单例】时间晶振入库组件初始化");
+			System.err.println("【单例】时间晶振入库组件初始化");
 		}
 	}
 
