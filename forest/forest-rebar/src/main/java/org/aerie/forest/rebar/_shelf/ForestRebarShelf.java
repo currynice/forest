@@ -6,6 +6,7 @@ import org.aerie.forest.core.factory.ForestShelf;
 import org.aerie.forest.rebar.bootable.timecrystal.TimeCrystal;
 import org.aerie.forest.rebar.bootable.uuidpool.UuidPool;
 import org.aerie.forest.rebar.tool.file.FileTool;
+import org.aerie.forest.rebar.tool.zclass.ClassTool;
 
 /**
  * 
@@ -75,6 +76,12 @@ public final class ForestRebarShelf extends ForestShelf {
 	 * File工具
 	 */
 	public final RebarScutcheon<FileTool> FILE_TOOL = new RebarScutcheon<FileTool>("File工具",
+			ForestRebarContainerCategory.TOOL) {
+	};
+	/**
+	 * class工具
+	 */
+	public final RebarScutcheon<ClassTool> CLASS_TOOL = new RebarScutcheon<ClassTool>("Ficlass工具",
 			ForestRebarContainerCategory.TOOL) {
 	};
 }

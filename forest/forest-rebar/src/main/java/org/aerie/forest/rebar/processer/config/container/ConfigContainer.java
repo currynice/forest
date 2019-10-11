@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.aerie.forest.core.element.brick.exception.CustomException;
+import org.aerie.forest.core.factory.ForestContainer;
+import org.aerie.forest.rebar._shelf.ForestRebarShelf;
+import org.aerie.forest.rebar.tool.zclass.ClassTool;
 
 /**
  * 
@@ -35,7 +38,8 @@ public abstract class ConfigContainer {
 				continue;
 			}
 			// 不为空的对象进行判断
-			if (!isBaseType(object) && !(object instanceof String) && !(object instanceof Enum)) {
+			if (!((ClassTool) ForestContainer.INSTANCE.getForestRebar(ForestRebarShelf.getInstance().CLASS_TOOL))
+					.isBaseType(object) && !(object instanceof String) && !(object instanceof Enum)) {
 				if (object instanceof ConfigContainer) {
 					result.addAll(((ConfigContainer) object).getFieldsNameIsNull());
 				} else {
@@ -45,42 +49,5 @@ public abstract class ConfigContainer {
 			}
 		}
 		return result;
-	}
-
-	/**
-	 * 
-	 * @description 判断对象是不是基本数据类型
-	 * @param object
-	 * @return
-	 */
-	private boolean isBaseType(Object object) {
-		if (object instanceof Byte) {
-			return true;
-		}
-		if (object instanceof Short) {
-			return true;
-		}
-		if (object instanceof Byte) {
-			return true;
-		}
-		if (object instanceof Long) {
-			return true;
-		}
-		if (object instanceof Float) {
-			return true;
-		}
-		if (object instanceof Double) {
-			return true;
-		}
-		if (object instanceof Boolean) {
-			return true;
-		}
-		if (object instanceof Character) {
-			return true;
-		}
-		if (object instanceof Integer) {
-			return true;
-		}
-		return false;
 	}
 }
