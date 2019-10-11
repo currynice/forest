@@ -1,5 +1,7 @@
 package org.aerie.forest.core.factory;
 
+import java.lang.reflect.Method;
+
 import org.aerie.forest.core.element.rebar.ForestRebar;
 import org.aerie.forest.core.element.rebar.ForestRebarStorage;
 import org.aerie.forest.core.genericity.ContainsGenericity;
@@ -49,14 +51,21 @@ public abstract class ForestShelf {
 		public ForestRebarStorage getForestRebarStorage() {
 			String storageName = getForestRebarClass().getName() + "Storage";
 			try {
+				// 获得入库组建的单例对象
+				Class<?> buildStorage = null;
+				try {
+					buildStorage = StorageBuilder.INSTANCE.buildStorage(forestRebarClass);
+				} catch (ClassNotFoundException e) {
+					throw new RuntimeException("无法找到：【" + storageName + "】入库组件", e);
+				} catch (Exception e) {
+					throw new RuntimeException("字节码生产【" + storageName + "】入库组件失败", e);
+				}
 				// 反射调用静态方法获取入库组件单例对象
-				return (ForestRebarStorage) Class.forName(storageName).getDeclaredMethod("getInstance").invoke(null);
-			} catch (ClassNotFoundException e) {
-				throw new RuntimeException("无法找到：【" + storageName + "】入库组件", e);
+				return (ForestRebarStorage) buildStorage.getMethod("getInstance").invoke(null);
 			} catch (NoSuchMethodException e) {
 				throw new RuntimeException("无法找到：【" + storageName + "】入库组件的获取单例对象的方法", e);
 			} catch (Exception e) {
-				throw new RuntimeException("入库组件： 【" + storageName + "】的获取单例对象的方法不合法");
+				throw new RuntimeException("入库组件： 【" + storageName + "】的获取单例对象的方法不合法", e);
 			}
 		}
 
