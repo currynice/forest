@@ -32,10 +32,5 @@
 			<artifactId>forest-rebar</artifactId>
 			<version>1.0.1</version>
 		</dependency>
-		<dependency>
-			<groupId>org.aerie.forest</groupId>
-			<artifactId>forest-tool</artifactId>
-			<version>1.0.1</version>
-		</dependency>
 	</dependencies>
 </project>

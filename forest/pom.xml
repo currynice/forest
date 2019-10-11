@@ -13,9 +13,7 @@
 		<module>forest-core</module>
 		<module>forest-factory</module>
 		<module>forest-framework</module>
-		<module>forest-tool</module>
 		<module>forest-brick</module>
-		<module>forest-processer</module>
 		<module>forest-rebar</module>
 	</modules>
 	<properties>
