@@ -1,4 +1,4 @@
-package org.aerie.forest.framework;
+package org.aerie.forest.rebar._shelf;
 
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
 import org.aerie.forest.core.factory.ForestRebarContainerCategory;

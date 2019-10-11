@@ -1,14 +1,15 @@
 package org.aerie.forest.rebar.processer.config;
 
 import java.io.File;
-import java.io.InputStream;
 import java.util.List;
 
 import org.aerie.forest.core.element.brick.exception.CustomException;
 import org.aerie.forest.core.element.brick.log.GlobalLogger;
 import org.aerie.forest.core.element.rebar.processer.ForestProcessor;
+import org.aerie.forest.core.factory.ForestContainer;
+import org.aerie.forest.rebar._shelf.ForestRebarShelf;
 import org.aerie.forest.rebar.processer.config.container.ForestConfig;
-import org.yaml.snakeyaml.Yaml;
+import org.aerie.forest.rebar.tool.file.FileTool;
 
 /**
  * 
@@ -84,9 +85,10 @@ public final class ConfigProcessor extends ForestProcessor {
 	public void loadConfig() {
 		// 加载配置文件【流加载】
 		try {
-			ForestConfig forestConfig = (ForestConfig) analyzeYamlByClass(
-					this.getClass().getClassLoader().getResourceAsStream(CONFIG_PATH + DEFAULT_CONFIG_PATH_YAML),
-					ForestConfig.class);
+			ForestConfig forestConfig = (ForestConfig) ((FileTool) ForestContainer.INSTANCE
+					.getForestRebar(ForestRebarShelf.getInstance().FILE_TOOL))
+							.analyzeYamlByClass(this.getClass().getClassLoader()
+									.getResourceAsStream(CONFIG_PATH + DEFAULT_CONFIG_PATH_YAML), ForestConfig.class);
 			List<String> fieldsNameIsNull = forestConfig.getFieldsNameIsNull();
 			if (fieldsNameIsNull != null && !fieldsNameIsNull.isEmpty()) {
 				throw new CustomException(fieldsNameIsNull.toString() + "这些配置文件的属性为空");
@@ -125,17 +127,4 @@ public final class ConfigProcessor extends ForestProcessor {
 		}
 	}
 
-	/**
-	 * 
-	 * @description yaml文件的解析
-	 * @author falconTrotk
-	 * @param filePath
-	 * @throws ExceptionPack
-	 */
-	private Object analyzeYamlByClass(InputStream inputStream, Class<?> zClass) throws CustomException {
-		if (null == inputStream)
-			throw new CustomException("yaml文件流为空");
-		Yaml yaml = new Yaml();
-		return yaml.loadAs(inputStream, zClass);
-	}
 }

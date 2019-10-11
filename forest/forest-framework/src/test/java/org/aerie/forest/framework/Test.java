@@ -1,6 +1,7 @@
 package org.aerie.forest.framework;
 
 import org.aerie.forest.core.factory.ForestFactory;
+import org.aerie.forest.rebar._shelf.ForestRebarShelf;
 import org.aerie.forest.rebar.bootable.uuidpool.UuidPool;
 
 public class Test {
