@@ -1,7 +1,5 @@
 package org.aerie.forest.core.factory;
 
-import java.lang.reflect.Method;
-
 import org.aerie.forest.core.element.rebar.ForestRebar;
 import org.aerie.forest.core.element.rebar.ForestRebarStorage;
 import org.aerie.forest.core.genericity.ContainsGenericity;
