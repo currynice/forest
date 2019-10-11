@@ -1,7 +1,7 @@
 package org.aerie.forest.framework;
 
-import org.aerie.forest.bootable.uuidpool.UuidPool;
 import org.aerie.forest.core.factory.ForestFactory;
+import org.aerie.forest.rebar.bootable.uuidpool.UuidPool;
 
 public class Test {
 	public static void main(String[] args) {

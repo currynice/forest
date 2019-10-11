@@ -9,8 +9,8 @@
 		<artifactId>forest</artifactId>
 		<version>1.0.1</version>
 	</parent>
-	<artifactId>forest-framework</artifactId>
-	<name>forest-framework</name>
+	<artifactId>forest-rebar</artifactId>
+	<name>forest-rebar</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -29,12 +29,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.aerie.forest</groupId>
-			<artifactId>forest-rebar</artifactId>
-			<version>1.0.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.aerie.forest</groupId>
-			<artifactId>forest-tool</artifactId>
+			<artifactId>forest-brick</artifactId>
 			<version>1.0.1</version>
 		</dependency>
 	</dependencies>
