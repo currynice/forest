@@ -19,7 +19,7 @@ import javassist.CtMethod;
  * @date 2019年10月11日上午10:55:38
  * @version 1.0.1
  */
-public enum StorageBuilder {
+enum StorageBuilder {
 	INSTANCE;
 
 	private final String STORAGE = "Storage";
@@ -61,7 +61,8 @@ public enum StorageBuilder {
 		StringBuffer buffer = new StringBuffer();
 		StringBuffer append = buffer.append("{\nsynchronized  (" + absoluteClassName + ".class) {\n")
 				.append("if (singletonFlag == true)\n").append("throw new RuntimeException(\"受到反射攻击\");\n")
-				.append("singletonFlag = true;\n").append("org.aerie.forest.core.element.brick.log.GlobalLogger.INSTANCE.getLOGGER().info(\"【单例】时间晶振入库组件初始化\");\n}\n}");
+				.append("singletonFlag = true;\n")
+				.append("org.aerie.forest.core.element.brick.log.GlobalLogger.INSTANCE.getLOGGER().info(\"【单例】时间晶振入库组件初始化\");\n}\n}");
 		ctConstructor.setBody(append.toString());
 		ctConstructor.setModifiers(Modifier.PRIVATE);
 		ctClass.addConstructor(ctConstructor);
