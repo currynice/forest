@@ -43,7 +43,7 @@ public enum ForestContainer {
 	 * @param forestRebar
 	 * @throws Exception
 	 */
-	public void addForestRebar(ForestRebar forestRebar) throws Exception {
+	public synchronized void addForestRebar(ForestRebar forestRebar) throws Exception {
 		for (ForestRebarContainerCategory forestRebarContainerCategory : ForestRebarContainerCategory.values()) {
 			Class<? extends ForestRebar> zclass = forestRebarContainerCategory.getZclass();
 			if (zclass.isInstance(forestRebar)) {
@@ -102,7 +102,7 @@ public enum ForestContainer {
 	 * @param first
 	 * @return
 	 */
-	private ForestRebar getForestRebar(RebarScutcheon<?> rebarScutcheon, boolean first) {
+	private synchronized ForestRebar getForestRebar(RebarScutcheon<?> rebarScutcheon, boolean first) {
 		// 获得需要取出的架构元素所在的容器的类型
 		Class<? extends ForestRebar> zclassOfForestRebarContainer = rebarScutcheon.getForestRebarContainerCategory()
 				.getZclass();
